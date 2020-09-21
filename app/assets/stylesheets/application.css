@@ -14,31 +14,92 @@
  *= require_self
  */
  h1{
-     color: red;
+    font-size: 450%;
      position: absolute;
-     right: 400px;
-     bottom: 200px;
+     bottom: 350px;
+     left: 200px;
+     color:darkred;
+ 
  }
 
  h2{
-    color: green;
-    position: relative;
-    right: 270px;
-    margin-right: 5px ;
+    position: absolute;
+    font-size: 130%;
+    left: 20px;
+    bottom: 330px;
+    color: grey;
 
  }
 
- .login-model{
-     position: absolute;
-     left: 450px;
-     top: 150px;
+ body {
+    position: absolute;
+    left: 300px;
+    width: 600px;
+    height: 500px;
+    border: 10px solid green;
+    
+   
+  }
+
+.login-form-box{
+    position: absolute;
+    left: 350px;
+    bottom: 200px;
+}
+
+
+
+.login-submit{
+    position: absolute;
+    left: 200px;
 }
 
 .signupLink{
     position: absolute;
-    display: flex;
-    right: 350px;
-    top: 100px;
+    left: 20px;
+    bottom: 100px;
+}
+
+.signup-form-box{
+    position: absolute;
+    left: 20px;
+    bottom: 150px;
+}
+
+.signup-lastName{
+    position: absolute;
+    left: 120px;
+    bottom: 100px;
+    width: 100px;
+}
+.signup-att{
+    width: 220px;
+}
+.signup-firstName{
+    position: absolute;
+    bottom: 100px;
+    width: 100px;
+}
+
+h3{
+    font-weight: normal;
+    font-size: 100%;
+    white-space: nowrap;
+    position: absolute;
+    bottom: 105px;
+    left: 0px;
 
 }
- 
+
+h4{
+    font-weight: normal;
+    font-size: 100%;
+    white-space: nowrap;
+    position: absolute;
+    bottom: 100px;
+    left: 120px;
+
+}
+
+
+

@@ -27,45 +27,44 @@ class SignupForm extends React.Component {
   render() {
     return (
       <div className="signup-model">
-        <form onSubmit={this.handleSubmit} className="login-form-box">
-          Signup
-          <br/>
-          Please {this.props.formType} or {this.props.navLink}
-          <div className="login-attributes">
-            <br/>
-            <label>Email:
-              <input type="text"
-                value={this.state.email}
-                onChange={this.update('email')}
-                className="login-input"
-              />
-            </label>
-            <br/>
-            <label>First Name:
+        <form onSubmit={this.handleSubmit} className="signup-form-box">
+          Sign up
+          <div className="signup-attributes">
+            <h3>First name </h3>
               <input type="text"
                 value={this.state.first_name}
                 onChange={this.update('first_name')}
-                className="login-input"
+                className="signup-firstName"
               />
-            </label>
             <br/>
-            <label>Last Name:
+              <h4>Last name</h4>
+              <br/>
               <input type="text"
                 value={this.state.last_name}
                 onChange={this.update('last_name')}
-                className="login-input"
+                className="signup-lastName"
+              />
+           
+            <br/>
+            <label>Email
+              <br/>
+              <input type="text"
+                value={this.state.email}
+                onChange={this.update('email')}
+                className="signup-att"
               />
             </label>
             <br/>
-            <label>Password:
+            <label className = "signup-password">Password
+            <br/>
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
-                className="login-input"
+                className="signup-att"
               />
             </label>
             <br/>
-            <input className="login-submit" type="submit" value={this.props.formType} />
+            <input className="signup-submit" type="submit" value={this.props.formType} />
           </div>
         </form>
       </div>
