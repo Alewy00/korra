@@ -13,3 +13,32 @@
  *= require_tree .
  *= require_self
  */
+ h1{
+     color: red;
+     position: absolute;
+     right: 400px;
+     bottom: 200px;
+ }
+
+ h2{
+    color: green;
+    position: relative;
+    right: 270px;
+    margin-right: 5px ;
+
+ }
+
+ .login-model{
+     position: absolute;
+     left: 450px;
+     top: 150px;
+}
+
+.signupLink{
+    position: absolute;
+    display: flex;
+    right: 350px;
+    top: 100px;
+
+}
+ 
