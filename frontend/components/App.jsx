@@ -8,12 +8,12 @@ import { AuthRoute } from '../util/route_util';
 
 export const App = () => (
   <div className="login-model">
-    <header>
+    {/* <header> */}
       {/* <Link to="/" className="home">
         Home
       </Link> */}
       <LoginFormContainer />
-    </header>
+    {/* </header> */}
     <Switch>
     <AuthRoute exact path="/login" component={LoginFormContainer} />
     <AuthRoute exact path="/signup" component={SignupFormContainer} />

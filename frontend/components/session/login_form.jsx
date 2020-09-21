@@ -22,31 +22,46 @@ class LoginForm extends React.Component {
     });
   }
 
+  renderErrors() {
+    return(
+      <div className="login-errors">
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error} 
+            <br/><br/>
+          </li>
+        ))}
+      
+      </ul>
+      </div>
+    );
+  }
+
   render() {
     return (
       <div className="login-module">
         <h1>Korra</h1>
         <h2>A place to share knowledge and better understand the world</h2>
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          login:
-          {/* Please {this.props.formType} or {this.props.navLink} */}
+           <h5>Login</h5>
+          <br/>
+          {this.renderErrors()}
           <div className="login-attributes">
-            <label>Email:
               <input type="text"
                 value={this.state.email}
                 onChange={this.update('email')}
                 className="login-input"
+                placeholder="Email"
               />
-            </label>
             <br/>
             <br/>
-            <label>Password:
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
                 className="login-input"
+                placeholder="Password"
               />
-            </label>
             <br/>
             <input className="login-submit" type="submit" value={this.props.formType} />
           </div>

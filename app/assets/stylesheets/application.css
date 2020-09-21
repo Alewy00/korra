@@ -19,6 +19,7 @@
      bottom: 350px;
      left: 200px;
      color:darkred;
+     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;;
  
  }
 
@@ -36,7 +37,9 @@
     left: 300px;
     width: 600px;
     height: 500px;
-    border: 10px solid green;
+    /* border: 10px solid green; */
+    /* background-color: white; */
+    background-image: url("https://miro.medium.com/max/3840/1*U_qMLDs5RMkaSbHpwwlwzQ.png");
     
    
   }
@@ -44,14 +47,37 @@
 .login-form-box{
     position: absolute;
     left: 350px;
-    bottom: 200px;
+    bottom: 240px;
+    
 }
 
+.login-model{
+
+    background-image: url('../images/header-shade.jpg');
+    width: 600px;
+    height: 500px;
+    background-color: white;
+}
 
 
 .login-submit{
     position: absolute;
-    left: 200px;
+    left: 125px;
+    top: 90px;
+    background: #3e78ad;
+    color: #fff;
+    border: 1px solid #3a66ad;
+    box-shadow: 0 1px 1px 0 rgba(200,200,200,0.6);
+}
+
+.signup-submit{
+    position: absolute;
+    left: 167px;
+    top: 170px;
+    background: #3e78ad;
+    color: #fff;
+    border: 1px solid #3a66ad;
+    box-shadow: 0 1px 1px 0 rgba(200,200,200,0.6);
 }
 
 .signupLink{
@@ -100,6 +126,38 @@ h4{
     left: 120px;
 
 }
+
+h5{
+    font-weight: bold;
+    font-size: 100%;
+    position: absolute;
+    bottom: 40px;
+    left: 1px;
+}
+
+h6{
+    font-weight: bold;
+    font-size: 100%;
+    position: absolute;
+    bottom: 120px;
+    left: 0px;
+}
+
+
+.login-errors{
+    position: absolute;
+    top: 100px;
+    right: -40px;
+    white-space: nowrap;
+    
+}
+li{
+   color: darkred;
+   display: inline;
+    
+}
+
+
 
 
 

@@ -28,7 +28,7 @@ class SignupForm extends React.Component {
     return (
       <div className="signup-model">
         <form onSubmit={this.handleSubmit} className="signup-form-box">
-          Sign up
+         <h6>Sign up</h6> 
           <div className="signup-attributes">
             <h3>First name </h3>
               <input type="text"
