@@ -24,3 +24,4 @@ class Api::QuestionsController < ApplicationController
     def question_params
         params.require(:question).permit(:body)
     end
+end
