@@ -37,8 +37,6 @@
     left: 300px;
     width: 600px;
     height: 500px;
-    /* border: 10px solid green; */
-    /* background-color: white; */
     background-image: url("https://miro.medium.com/max/3840/1*U_qMLDs5RMkaSbHpwwlwzQ.png");
     
    
@@ -147,13 +145,6 @@ h6{
     position: absolute;
     top: 100px;
     right: -5px;
-    /* white-space: nowrap; */
-    /* display:inline-block; */
-    
-     /* width: 100px;  */
-     /* height: 100px; */
-     /* list-style-position:inside;
-    border: 1px solid black; */
 }
 .signup-errors{
     position: absolute;
@@ -168,11 +159,10 @@ li{
    border: 1px solid rgb(243, 71, 71);
    font-size: 90%;
    width: 200px;
-
 }
 
 li a{
-    color: rgb(243, 71, 71);;
+    color: rgb(243, 71, 71);
 }
 
 
