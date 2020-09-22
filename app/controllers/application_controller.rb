@@ -10,6 +10,7 @@ class ApplicationController < ActionController::Base
     user.reset_session_token!
     session[:session_token] = user.session_token
     @current_user = user
+ 
   end
 
     def logged_in?
@@ -23,9 +24,7 @@ class ApplicationController < ActionController::Base
   end
 
   def require_logged_in
-    unless current_user
-      render json: { base: ['You must be logged in to access this page!'] }
-    end
+      redirect_to new_session_url unless logged_in?
   end
 
 end

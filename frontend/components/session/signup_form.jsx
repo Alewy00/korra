@@ -24,10 +24,12 @@ class SignupForm extends React.Component {
     });
   }
 
+
   render() {
     return (
       <div className="signup-model">
         <form onSubmit={this.handleSubmit} className="signup-form-box">
+          {/* {this.renderSignupErrors()} */}
          <h6>Sign up</h6> 
           <div className="signup-attributes">
             <h3>First name </h3>

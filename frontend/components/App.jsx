@@ -1,4 +1,4 @@
-import GreetingContainer from "./greeting/greeting_container";
+
 import React from "react";
 import {Route, Link} from 'react-router-dom';
 import LoginFormContainer from './session/login_form_container'
@@ -9,9 +9,6 @@ import { AuthRoute } from '../util/route_util';
 export const App = () => (
   <div className="login-model">
     {/* <header> */}
-      {/* <Link to="/" className="home">
-        Home
-      </Link> */}
       <LoginFormContainer />
     {/* </header> */}
     <Switch>

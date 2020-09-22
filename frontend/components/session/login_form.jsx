@@ -8,6 +8,7 @@ class LoginForm extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.renderErrors = this.renderErrors.bind(this);
   }
 
   handleSubmit(e) {
@@ -21,18 +22,38 @@ class LoginForm extends React.Component {
       [field]: e.currentTarget.value
     });
   }
-
+  
   renderErrors() {
+        if(this.props.errors.length === 0){
+            return(
+              <div></div>
+            )
+        }
+        if(this.props.errors.length > 1){
+          return(
+            <div className="signup-errors">
+            <ul>
+            {this.props.errors.map((error, i) => (
+            <li key={`error-${i}`}>
+              {error} 
+              <br/><br/>
+            </li>
+          ))}   
+        </ul>
+        </div>
+          )
+      }
+
     return(
       <div className="login-errors">
       <ul>
-        {this.props.errors.map((error, i) => (
+         {/* {this.props.errors.map((error, i) => (
           <li key={`error-${i}`}>
             {error} 
             <br/><br/>
           </li>
-        ))}
-      
+        ))}  */}
+             <li>No account found for this email. Retry, or <Link to="/signup">Sign up for Korra</Link> </li> 
       </ul>
       </div>
     );
@@ -44,9 +65,9 @@ class LoginForm extends React.Component {
         <h1>Korra</h1>
         <h2>A place to share knowledge and better understand the world</h2>
         <form onSubmit={this.handleSubmit} className="login-form-box">
+           {this.renderErrors()}
            <h5>Login</h5>
           <br/>
-          {this.renderErrors()}
           <div className="login-attributes">
               <input type="text"
                 value={this.state.email}
