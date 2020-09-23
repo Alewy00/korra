@@ -8,7 +8,7 @@ class QuestionIndexItem extends React.Component {
     return (
       <div className="question-header">
           <div>
-            <h1 id="question-header">Written by {question.author.fname} {question.title}  </h1>
+            <h1 id="question-header">Written by {question.author_id} {question.title}  </h1>
         </div>
         <p id="question-body">{question.body}</p>
       </div>

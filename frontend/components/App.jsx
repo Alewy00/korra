@@ -10,7 +10,7 @@ export const App = () => (
       <div className="index">
           <AskQuestionFormContainer />
           <Greetings />
-          {/* <QuestionIndex /> */}
+          <QuestionIndex />
           {/* <Route exact path="/" component={QuestionIndex} /> */}
           {/* <Greetings/> */}
         {/* <Switch></Switch> */}
