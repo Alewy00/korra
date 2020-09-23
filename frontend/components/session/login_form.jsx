@@ -1,14 +1,30 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import { withRouter, Route, Redirect } from 'react-router-dom';
+import Signup from './signup_form_container';
+
 class LoginForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       email: '',
-      password: ''
+      password: '',
+      showSignup: false
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
+    this.hideComponent = this.hideComponent.bind(this);
+  }
+  hideComponent(name) {
+    switch (name) {
+      case "showSignup":
+        console.log("hi")
+        this.setState({ showSignup: !this.state.showSignup });
+
+        break;
+      default:
+        null;
+    }
   }
 
   handleSubmit(e) {
@@ -34,7 +50,7 @@ class LoginForm extends React.Component {
             <div className="signup-errors">
             <ul>
             {this.props.errors.map((error, i) => (
-            <li key={`error-${i}`}>
+            <li key={`error-${i}`} id="error">
               {error} 
               <br/><br/>
             </li>
@@ -53,20 +69,27 @@ class LoginForm extends React.Component {
             <br/><br/>
           </li>
         ))}  */}
-             <li>No account found for this email. Retry, or <Link to="/signup">Sign up for Korra</Link> </li> 
+             <li id="error">No account found for this email. Retry, or <Link to="/signup">Sign up for Korra</Link> </li> 
       </ul>
       </div>
     );
   }
-
+  
   render() {
+    const {showSignup} = this.state;
     return (
+      <div className="login-home">
+        
       <div className="login-module">
-        <h1>Korra</h1>
-        <h2>A place to share knowledge and better understand the world</h2>
+      {showSignup && <Signup />}
+            <button className="signup-button" onClick={() => this.hideComponent("showSignup")}>
+            Sign up with email
+          </button>
+        <h1 id="Korra"> Korra</h1>
+        <h2 id="motto">A place to share knowledge and better understand the world</h2>
         <form onSubmit={this.handleSubmit} className="login-form-box">
            {this.renderErrors()}
-           <h5>Login</h5>
+           <h5 id="login-att">Login</h5>
           <br/>
           <div className="login-attributes">
               <input type="text"
@@ -74,7 +97,7 @@ class LoginForm extends React.Component {
                 onChange={this.update('email')}
                 className="login-input"
                 placeholder="Email"
-              />
+                />
             <br/>
             <br/>
               <input type="password"
@@ -82,16 +105,15 @@ class LoginForm extends React.Component {
                 onChange={this.update('password')}
                 className="login-input"
                 placeholder="Password"
-              />
+                />
             <br/>
             <input className="login-submit" type="submit" value={this.props.formType} />
           </div>
         </form>
-        <div className="signupLink">
-        <Link to="/signup">Sign up with email</Link>
-        </div>
       </div>
+     </div>
     );
+
   }
 }
 

@@ -5,7 +5,7 @@ class Api::QuestionsController < ApplicationController
         @question = Question.new(question_params)
         @question.author_id = current_user.id
         if @question.save
-            render :show
+            render "api/questions/show"
         else 
             render json: @question.errors.full_messages, status: 422
         end
@@ -13,12 +13,12 @@ class Api::QuestionsController < ApplicationController
 
     def index
         @questions = Question.all
-        render :index
+        render "api/questions/index"
     end 
 
     def show
         @question = Question.find_by(id: params[:id])
-        render :show
+        render "api/questions/show"
     end 
 
     def question_params

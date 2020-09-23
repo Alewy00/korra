@@ -6,6 +6,7 @@ import {login, signup, logout} from "./actions/session_actions"
 
 document.addEventListener("DOMContentLoaded", () => {
 let store;
+window.logout = logout;
 if (window.currentUser) {
   const preloadedState = {
     entities: {
