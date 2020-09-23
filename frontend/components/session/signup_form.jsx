@@ -23,7 +23,20 @@ class SignupForm extends React.Component {
       [field]: e.currentTarget.value
     });
   }
-
+  renderSignupErrors(){
+    return(
+        <div className="signup-errors">
+        <ul>
+        {this.props.errors.map((error, i) => (
+        <li key={`error-${i}`} id="error">
+          {error} 
+          <br/><br/>
+        </li>
+      ))}   
+    </ul>
+    </div>
+    )
+  }
 
   render() {
     return (

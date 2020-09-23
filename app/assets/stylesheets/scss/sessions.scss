@@ -18,9 +18,9 @@ main{
 
 
 #Korra{
-    font-size: 450%;
+    font-size: 500%;
      position: absolute;
-     bottom: 350px;
+     bottom: 320px;
      left: 200px;
      color:rgb(192, 34, 34);
      font-family: 'Lobster', cursive;
@@ -30,11 +30,14 @@ main{
  #motto{
     position: absolute;
     font-size: 130%;
-    left: 20px;
+    left: 30px;
     bottom: 330px;
     color: grey;
 
  }
+ input{
+     background-color:rgb(235, 231, 231);
+    }
 
 
 .login-home{
@@ -124,6 +127,31 @@ main{
     width: 100px;
 }
 
+.footer{
+    background-color: rgb(228, 228, 228);
+    // height: 25px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    font-weight: normal;
+    font-size: 100%;
+    white-space: nowrap;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+#login-footer{
+  
+    bottom: 5px;
+    list-style-type: none;
+    display: flex;
+    font-weight: normal;
+    font-size: 80%;
+    justify-content: space-around;
+}
+
+
+
 #first-name{
     font-weight: normal;
     font-size: 100%;
@@ -180,7 +208,21 @@ main{
    font-size: 90%;
    width: 200px;
 }
+.error-link{
+    color: rgb(243, 71, 71);
+    position: absolute;
+    right: 45px;
+    top: 34.5px;
+    background: none;
+    border: none;
+    margin: none;
+    padding: 0;
+    font-family: arial, sans-serif;
+    text-decoration: underline;
+    cursor: pointer;
+}
 
 li a{
     color: rgb(243, 71, 71);
+    
 }

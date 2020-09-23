@@ -12,7 +12,7 @@ if (window.currentUser) {
     entities: {
       users: { [window.currentUser.id]: window.currentUser }
     },
-    session: { id: window.currentUser.id }
+    session: { curentUser: window.currentUser}
   };
   store = configureStore(preloadedState);
   delete window.currentUser;

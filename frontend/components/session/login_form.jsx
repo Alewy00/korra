@@ -20,7 +20,6 @@ class LoginForm extends React.Component {
       case "showSignup":
         console.log("hi")
         this.setState({ showSignup: !this.state.showSignup });
-
         break;
       default:
         null;
@@ -48,6 +47,7 @@ class LoginForm extends React.Component {
         if(this.props.errors.length > 1){
           return(
             <div className="signup-errors">
+
             <ul>
             {this.props.errors.map((error, i) => (
             <li key={`error-${i}`} id="error">
@@ -69,7 +69,9 @@ class LoginForm extends React.Component {
             <br/><br/>
           </li>
         ))}  */}
-             <li id="error">No account found for this email. Retry, or <Link to="/signup">Sign up for Korra</Link> </li> 
+            <li id="error">No account found for this email. Retry, or  <button className="error-link" onClick={() => this.hideComponent("showSignup")}>
+            Sign up for Korra
+          </button></li> 
       </ul>
       </div>
     );
@@ -110,6 +112,17 @@ class LoginForm extends React.Component {
             <input className="login-submit" type="submit" value={this.props.formType} />
           </div>
         </form>
+          <div className="footer">
+            <ul id="login-footer"> 
+            <li id="about">About</li>
+            <li>Languages </li>
+            <li>Careers </li>
+            <li>Businesses</li>
+            <li>Privacy Terms </li>
+            <li id="contact">Contact©</li>
+            {/* <li id="quora">Quora Inc. 2020</li> */}
+             </ul>
+          </div>
       </div>
      </div>
     );

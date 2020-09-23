@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter, Redirect } from 'react-router-dom';
 
-// when user clicks on "Add Question", a pop-up appears asking for user to enter a question
+
 class AskQuestion extends React.Component {
     constructor(props) {
         super(props);
@@ -9,6 +9,8 @@ class AskQuestion extends React.Component {
             body: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handlCancel = this.handleSubmit.bind(this);
+       
      }
 
 
@@ -36,30 +38,76 @@ class AskQuestion extends React.Component {
         [field]: e.currentTarget.value
         });
     }
+       
   
+
+    handleQuestion(){
+        const modal = document.getElementById("modal");
+        modal.style.display = "block";
+    }
+    handleCancel(){
+        const modal = document.getElementById("modal");
+            modal.style.display = "none";
+     }
+    // window.onclick = function(event) {
+    //     if (event.target == modal) {
+    //       modal.style.display = "none";
+    //     }
+    //   }
+
+
     render() {
         const { currentUser } = this.props;
-        return (
-            <div className="ask-question_form">
-            <form onSubmit={this.handleSubmit} className="q-form-box">
-           {/* {this.renderErrors()} */}
-           <h5>Ask Question</h5>
-          <div className="question-attributes">
-              <input type="text"
-                value={this.state.body}
-                onChange={this.update('body')}
-                className="body-input"
-                placeholder="Title"
-              />
-            <br/>
-            <input className="question-submit" type="submit" value={this.props.formType} />
+      
+    
+      return (
+          <div>
+          <div className="ask">
+            <h1></h1>
+            <button className="ask-q-button" onClick={this.handleQuestion}>
+                <span className="button-username">
+                        {currentUser.first_name}
+                </span>
+                <span className="inner-ask-button">
+                    What is your question?
+                </span> 
+            </button>
           </div>
-        </form>
-         </div>
-        )
-    }
+          <div id="modal" className="modal-main hide">
+          <form onSubmit={this.handleSubmit} className="q-form-box">
+          <div className="ask-question-component">
+          <div className="modal-content">
+          <button className="x" onClick={this.handleCancel}>X</button>
+          <h1>Add Question</h1>
+          <button className="close-button" onClick={this.handleCancel}>Close</button>
+        <div className="question-attributes">
+               <h2>Tips on getting good answers quickly</h2>
+            <ul className="asker-helper">
+               <li> Make sure your question has not been asked already</li>
+               <li>  Keep your question short and to the point</li>
+               <li>  Double-check grammar and spelling</li>
+            </ul>
+            <textarea type="text"
+              value={this.state.body}
+              onChange={this.update('body')}
+              className="body-input"
+              placeholder="Start Your Question with What. Why, How etc.. ">
+              </textarea>
+          <br/>
+          <input className="question-submit" type="submit" value={this.props.formType} />
+        </div>
+            </div>
+       </div>
+       
+      </form>
+       </div>
+       </div>
+      )
+     }
 }
- export default AskQuestion;
-                
+       
+     
+export default AskQuestion;
+
                
 

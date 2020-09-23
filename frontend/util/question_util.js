@@ -13,9 +13,16 @@ export const recieveQuestion = questionId => (
     })
 )
 
+
 export const recieveAllQuestions = () => (
     $.ajax({
         url: '/api/questions',
         method: 'GET'
     })
-)
+    )
+export const deleteQuestion = question => (
+    $.ajax({
+        url: `/api/questions/${question.id}`,
+        method: 'DELETE',
+    })
+);
