@@ -10,7 +10,7 @@ const Greeting = ({ currentUser, logout }) => {
     );
     const personalGreeting = () => (
       <div className="ask_question">
-        <h1>{currentUser.first_name}!</h1>
+        {/* <h1>{currentUser.first_name}!</h1> */}
         <button onClick={logout}>Log Out</button>
       </div>
     );

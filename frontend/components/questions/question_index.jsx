@@ -7,8 +7,8 @@ class QuestionIndex extends React.Component {
   constructor(props){
     super(props);
     this.state = {}; 
-    this.props.recieveAllQuestions().then((questionss) => {
-      this.state = questionss;
+    this.props.recieveAllQuestions().then((questions) => {
+      this.state = questions;
     });
     this.handleDelete = this.handleDelete.bind(this)
   }
@@ -21,8 +21,8 @@ class QuestionIndex extends React.Component {
   }
 
   editButtons(question) {
-    console.log(question.author_id)
-    if (question.author_id == this.props.currentUser.id) {
+    // console.log(question.author_id)
+    if (question.author_id === this.props.currentUser.id) {
       return (
         <div className="edit-buttons">
           {/* <button className="edit-crud-button" onClick={() => this.handleEdit(question)}>Edit</button> */}
@@ -38,12 +38,14 @@ class QuestionIndex extends React.Component {
         <div className="question-index">
        <h1>Questions</h1>
        <div className="question-item">
+         <ul className ="question-list">
             {questions.map((question, i) => (
                 <li key={i} className="question-items">
                   <IndexItem question={question} key={question.id} />
                   {this.editButtons(question)}
                 </li>
                 ))}
+          </ul>
           </div> 
         </div>
     )          

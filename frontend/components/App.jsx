@@ -5,8 +5,8 @@ import QuestionIndex from './questions/question_index_container'
 
 export const App = () => (
 
-  <div>
-          {/* <LoginFormContainer /> */}
+ 
+        
       <div className="index">
           <AskQuestionFormContainer />
           <Greetings />
@@ -17,7 +17,7 @@ export const App = () => (
         {/* <AuthRoute exact path="/login" component={LoginFormContainer} /> */}
         {/* <Route exact path="/signup" component={SignupFormContainer} /> */}
        
-      </div>
+   
     </div>
    
 

@@ -9,7 +9,7 @@ class AskQuestion extends React.Component {
             body: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.handlCancel = this.handleSubmit.bind(this);
+        // this.handleCancel = this.handleSubmit.bind(this);
        
      }
 
@@ -17,22 +17,10 @@ class AskQuestion extends React.Component {
     handleSubmit(e) {        
         e.preventDefault();
         this.props.askQuestion(this.state).then(this.setState({title: ''})) 
+        this.handleCancel()
     }
 
-//     renderErrors() {
-//         return(
-//             <div className="login-errors">
-//             <ul>
-//                 {this.props.errors.map((error, i) => (
-//                 <li key={`error-${i}`}>
-//                     {error} 
-//                     <br/><br/>
-//                 </li>
-//                 ))}     
-//             </ul>
-//             </div>
-//         );
-//   }
+
     update(field) {
         return e => this.setState({
         [field]: e.currentTarget.value
@@ -74,12 +62,12 @@ class AskQuestion extends React.Component {
             </button>
           </div>
           <div id="modal" className="modal-main hide">
+          <button className="x" onClick={this.handleCancel}>X</button>
+          <button className="close-button" onClick={this.handleCancel}>Close</button>
           <form onSubmit={this.handleSubmit} className="q-form-box">
           <div className="ask-question-component">
           <div className="modal-content">
-          <button className="x" onClick={this.handleCancel}>X</button>
           <h1>Add Question</h1>
-          <button className="close-button" onClick={this.handleCancel}>Close</button>
         <div className="question-attributes">
                <h2>Tips on getting good answers quickly</h2>
             <ul className="asker-helper">

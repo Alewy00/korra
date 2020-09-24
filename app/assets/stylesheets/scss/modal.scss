@@ -31,23 +31,23 @@
   }
   .ask{
       position: absolute;
-      top: 50px;
-      right: 660px;
+      top: 60px;
+      right: 650px;
       width: 300px;
       height: 100px;
   }
   .ask-q-button{
     padding-right: 300px;
     padding-left: 300px;
-    padding-bottom: 40px;
+    padding-bottom: 60px;
     font-weight: normal;
-    border: none;
-    font-size: 125%;
+    border: 1px solid white;
+    font-size: 18px;
     text-align: left;
-    background-color: rgb(145, 140, 140);
+    background-color: white;
     white-space: nowrap;
     text-indent: -300px;
-    color:  white;
+    color: #939598;;
   }
 .inner-ask-button{
     position: relative;
