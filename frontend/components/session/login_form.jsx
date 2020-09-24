@@ -14,11 +14,11 @@ class LoginForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
     this.hideComponent = this.hideComponent.bind(this);
+    this.demoLogin = this.demoLogin.bind(this);
   }
   hideComponent(name) {
     switch (name) {
       case "showSignup":
-        console.log("hi")
         this.setState({ showSignup: !this.state.showSignup });
         break;
       default:
@@ -31,6 +31,11 @@ class LoginForm extends React.Component {
     const user = Object.assign({}, this.state);
     this.props.processForm(user);
   }
+
+  demoLogin(e) {
+    e.preventDefault();
+    this.props.processForm({email:"alewy00", password: "hunter12"});  
+}
 
   update(field) {
     return e => this.setState({
@@ -63,12 +68,6 @@ class LoginForm extends React.Component {
     return(
       <div className="login-errors">
       <ul>
-         {/* {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
-            {error} 
-            <br/><br/>
-          </li>
-        ))}  */}
             <li id="error">No account found for this email. Retry, or  <button className="error-link" onClick={() => this.hideComponent("showSignup")}>
             Sign up for Korra
           </button></li> 
@@ -84,7 +83,11 @@ class LoginForm extends React.Component {
         
       <div className="login-module">
       {showSignup && <Signup />}
-            <button className="signup-button" onClick={() => this.hideComponent("showSignup")}>
+  
+     <div id="demo-button-container"  onClick={(e) => this.demoLogin(e)}>
+        <button className="demo-button" href="">Demo Login</button>
+    </div>
+            <button className="signup-button" onClick={(e) => this.hideComponent("showSignup")}>
             Sign up with email
           </button>
         <h1 id="Korra"> Korra</h1>
