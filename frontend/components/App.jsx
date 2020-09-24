@@ -8,16 +8,9 @@ export const App = () => (
  
         
       <div className="index">
-          <AskQuestionFormContainer />
           <Greetings />
+          <AskQuestionFormContainer />
           <QuestionIndex />
-          {/* <Route exact path="/" component={QuestionIndex} /> */}
-          {/* <Greetings/> */}
-        {/* <Switch></Switch> */}
-        {/* <AuthRoute exact path="/login" component={LoginFormContainer} /> */}
-        {/* <Route exact path="/signup" component={SignupFormContainer} /> */}
-       
-   
     </div>
    
 

@@ -118,7 +118,7 @@ class LoginForm extends React.Component {
           <div className="footer">
             <ul id="login-footer"> 
             <li id="about">About</li>
-            <li>Languages </li>
+            <li ><a id="github" href="https://github.com/Alewy00/korra">Github</a> </li>
             <li>Careers </li>
             <li>Businesses</li>
             <li>Privacy Terms </li>

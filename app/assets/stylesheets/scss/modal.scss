@@ -2,32 +2,152 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .modal-main {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none; 
+    position: absolute;
+    z-index: 3;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
   }
 
   .modal-content {
+    position: relative;
+    top: -150px;
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto; 
     padding: 20px;
     border: 1px solid #888;
-    width: 600px; /* Could be more or less, depending on screen size */
-    height: 500px;
+    width: 600px; 
+    height: 450px;
+  }
+  .tips{
+    position: relative;
+    left: 10px;
+    background-color: hsl(227, 53%, 93%);
+    height: 110px;
+    width: 500px;
+  }
+
+  .question-submit{
+    background-color: blue;
+    color: white;
+    border-radius: 56px;
+    width: 140px;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    display: inline-block;
+    position: relative;
+    right: -480px;
+    top: 2px;
+  }
+
+  #tips{
+    position: relative;
+    top: 15px;
+    left: 20px;
+    font-size: 17px;
+    color: rgb(36, 36, 243);
+  }
+  .tip-list{
+    font-size: 16px;
+    color: rgb(36, 36, 243);
+    font-weight: lighter;
+  }
+  #who-asked{
+    position: relative;
+    left: 10px;
+    font-size: 16px;
+    color: #939598;
+  }
+  textarea {
+    resize: none;
+    font-size: 15px;
+    padding: 10px;
+    height:38px;
+    min-height: 38px;
+    width: 550px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+   
+  }
+  input:focus,
+  select:focus,
+  textarea:focus,
+  button:focus {
+      outline: none;
   }
 
   .x {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+    z-index: 1;
+    position: absolute;
+    right: 315px;
+    top: 44px;
+    color: black;
+    // float: right;
+    font-size: 24px;
+    // font-weight: bold;
+    border: none;
+    background: none;
+    
+  }
+  .close-button{
+    z-index: 2;
+    position: absolute;
+    top: 480px;
+    left: 670px;
+    background: none;
+    color:grey;
+    font-weight: bolder;
+    border-radius: 56px;
+    width: 140px;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    display: inline-block;
+    
+
+  }
+  .grey-top{
+    position: relative;
+    top: -35px;
+    right: 21px;
+    background-color: #dee0e1;
+    width: 641.5px;
+    height: 50px;
+  }
+  .module-footer{
+    position: relative;
+    bottom: -146px;
+    left: -20px;
+    background-color: #dee0e1;
+    width: 640.5px;
+    height: 50px;
+  }
+
+  #ask-q{
+    position: relative;
+    top: 12px;
+    color: #b92b27;
+    font-size: 20px;
+    white-space: nowrap;
+    width: 100%;
+    text-indent: 20px;
+
   }
   .ask{
       position: absolute;
@@ -37,6 +157,7 @@
       height: 100px;
   }
   .ask-q-button{
+
     padding-right: 300px;
     padding-left: 300px;
     padding-bottom: 60px;
@@ -46,15 +167,20 @@
     text-align: left;
     background-color: white;
     white-space: nowrap;
-    text-indent: -300px;
-    color: #939598;;
+    text-indent: -320px;
+    color: #939598;
   }
 .inner-ask-button{
     position: relative;
-    top: 30px;
+    top: 45px;
+    font-weight: bold; 
 }
 .button-username{
-    font-size: 75%;
+  position: relative;
+    top: 10px;
+    left: 42px;
+    font-size: 16px;
+    font-weight: lighter;
 }
 
 .close:hover,

@@ -9,10 +9,13 @@ const Greeting = ({ currentUser, logout }) => {
       </div>
     );
     const personalGreeting = () => (
-      <div className="ask_question">
-        {/* <h1>{currentUser.first_name}!</h1> */}
+    <div>
+      <Link to="/login" id="korra-taskbar">Korra</Link>
+      <div className="logout">
         <button onClick={logout}>Log Out</button>
       </div>
+      </div>
+
     );
   
     return currentUser ? personalGreeting() : sessionLinks();

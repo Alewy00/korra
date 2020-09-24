@@ -42,6 +42,7 @@ class AskQuestion extends React.Component {
     //       modal.style.display = "none";
     //     }
     //   }
+  
 
 
     render() {
@@ -62,27 +63,37 @@ class AskQuestion extends React.Component {
             </button>
           </div>
           <div id="modal" className="modal-main hide">
-          <button className="x" onClick={this.handleCancel}>X</button>
+          <button className="x" onClick={this.handleCancel}>x</button>
           <button className="close-button" onClick={this.handleCancel}>Close</button>
           <form onSubmit={this.handleSubmit} className="q-form-box">
           <div className="ask-question-component">
           <div className="modal-content">
-          <h1>Add Question</h1>
+          <div className="grey-top">
+            <h1 id="ask-q">Add Question</h1>
+          </div>
         <div className="question-attributes">
-               <h2>Tips on getting good answers quickly</h2>
-            <ul className="asker-helper">
-               <li> Make sure your question has not been asked already</li>
-               <li>  Keep your question short and to the point</li>
-               <li>  Double-check grammar and spelling</li>
-            </ul>
+            <div className="tips">
+               <h2 id="tips">Tips on getting good answers quickly</h2>
+                <ul className="tip-list">
+                    <li> Make sure your question has not been asked already</li>
+                    <li>  Keep your question short and to the point</li>
+                    <li>  Double-check grammar and spelling</li>
+                </ul>
+            </div>
+      <h2 id="who-asked">{currentUser.first_name} asked </h2>
             <textarea type="text"
+                cols="50"
+                rows="1"
               value={this.state.body}
               onChange={this.update('body')}
               className="body-input"
               placeholder="Start Your Question with What. Why, How etc.. ">
               </textarea>
           <br/>
-          <input className="question-submit" type="submit" value={this.props.formType} />
+          <div className="module-footer">
+            <button className="question-submit">Add question</button>
+          </div>
+          {/* <input className="question-submit" type="submit" value={this.props.formType} /> */}
         </div>
             </div>
        </div>
