@@ -33,6 +33,8 @@ class Api::QuestionsController < ApplicationController
     def destroy
         @question = Question.find(params[:id])
         @question.destroy
+        # render json: "hello"
+        render json: ["deleted"]
     end
 
     def question_params

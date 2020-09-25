@@ -37,13 +37,7 @@ class AskQuestion extends React.Component {
         const modal = document.getElementById("modal");
             modal.style.display = "none";
      }
-    // window.onclick = function(event) {
-    //     if (event.target == modal) {
-    //       modal.style.display = "none";
-    //     }
-    //   }
   
-
 
     render() {
         const { currentUser } = this.props;

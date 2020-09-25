@@ -1,4 +1,5 @@
 .index{
+    margin: auto;
     background-color: rgb(235, 233, 233);
     // background-repeat: no-repeat;
     // background-attachment: scroll;
@@ -8,9 +9,10 @@
 }
 
 .question-index{
-    position: relative;
-    right: -255px;
-    top: 150px;
+    position: absolute;
+    // margin: auto;
+    right: 335px;
+    top: 200px;
 }
 
 .question-list{

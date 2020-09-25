@@ -24,4 +24,5 @@ export const deleteQuestion = question => (
         url: `/api/questions/${question.id}`,
         method: 'DELETE',
     })
+   
 );

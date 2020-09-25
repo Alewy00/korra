@@ -16,14 +16,14 @@ class QuestionIndex extends React.Component {
 
 
   handleDelete(question) {
-    this.props.deleteQuestion(question).then(() => {
-      this.setState(this.props.questions)
-    })
+    console.log("hit delete")
+    this.props.deleteQuestion(question)
+    // .then(() => {this.setState(this.props.questions)})
   }
 
   editButtons(question) {
-    // console.log(question)
-      // console.log(this.props.currentUser.id)
+    console.log(question.author_id)
+      console.log(this.props.currentUser.id)
       if (question.author_id == this.props.currentUser.id) {
         return (
           <div className="edit-buttons">
