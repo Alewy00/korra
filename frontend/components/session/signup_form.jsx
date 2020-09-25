@@ -46,14 +46,14 @@ class SignupForm extends React.Component {
    
          <h6 id="signup-att">Sign up</h6> 
           <div className="signup-attributes">
-            <h3 id="first-name">First name </h3>
+            <h3 id="first-name">FIRST NAME </h3>
               <input type="text"
                 value={this.state.first_name}
                 onChange={this.update('first_name')}
                 className="signup-firstName"
               />
             <br/>
-              <h4 id="last-name">Last name</h4>
+              <h4 id="last-name">LAST NAME</h4>
               <br/>
               <input type="text"
                 value={this.state.last_name}
@@ -62,21 +62,21 @@ class SignupForm extends React.Component {
               />
            
             <br/>
-            <label>Email
+            <label className="signup-email-label">EMAIL
               <br/>
               <input type="text"
                 value={this.state.email}
                 onChange={this.update('email')}
-                className="signup-att"
+                className="signup-email"
               />
             </label>
             <br/>
-            <label className = "signup-password">Password
+            <label className = "signup-password-label">PASSWORD
             <br/>
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
-                className="signup-att"
+                className="signup-password"
               />
             </label>
             <br/>

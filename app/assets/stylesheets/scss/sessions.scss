@@ -22,20 +22,20 @@ main{
 
 
 #Korra{
-    font-size: 500%;
-     position: absolute;
-     bottom: 320px;
-     left: 200px;
+    font-size: 600%;
+     position: relative;
+     top: 20px;
+     left: 210px;
      color:rgb(192, 34, 34);
      font-family: 'Lobster', cursive;
  
  }
 
  #motto{
-    position: absolute;
+    position: relative;
     font-size: 130%;
-    left: 30px;
-    bottom: 330px;
+    left: 90px;
+    top: -20px;
     color: grey;
 
  }
@@ -58,13 +58,17 @@ input .login-attributes {
 
 .login-module{
     position: relative;
-    top: 50px;
-    right: -320px;
+    margin: auto;
+    top: 60px;
     background-image: image-url('korra-white.jpg');
     width: 600px;
-    height: 500px;
+    height: 535px;
+    font-family: 'Roboto', sans-serif;
     // background-color: white;
-    
+    // font-weight: bold;
+    font-size: 80%;
+    box-shadow: 2px 2px;
+    color:  rgb(184, 181, 181);
 
 }
 input{
@@ -81,21 +85,21 @@ input{
 
 
 .login-form-box{
-    position: absolute;
-    left: 350px;
-    bottom: 240px;
+    position: relative;
+    left: 320px;
+    bottom: -10px;
 }
 
 
 .login-submit{
     position: absolute;
-    left: 110px;
-    top: 85px;
+    left: 185px;
+    top: 125px;
     background: #3e78ad;
     color: #fff;
     border: 1px solid #3a66ad;
     box-shadow: 0 1px 1px 0 rgba(200,200,200,0.6);
-    padding: 2px;
+    padding: 5px;
     border-radius: 3px;
     font-size: 100%;
     width: 60px;
@@ -104,12 +108,12 @@ input{
 .signup-submit{
     position: absolute;
     left: 145px;
-    top: 170px;
+    top: 260px;
     background: #3e78ad;
     color: #fff;
     border: 1px solid #3a66ad;
     box-shadow: 0 1px 1px 0 rgba(200,200,200,0.6);
-    padding: 2px;
+    padding: 5px;
     border-radius: 3px;
     font-size: 100%;
     width: 80px;
@@ -134,21 +138,64 @@ input{
     bottom: 150px;
 }
 
-.signup-lastName{
-    position: absolute;
-    left: 120px;
-    bottom: 100px;
-    width: 100px;
-}
 .signup-att{
+    // width: 220px;
+
+}
+.signup-attributes{
     width: 220px;
+}
+.signup-lastName{
+        position: absolute;
+        left: 120px;
+        bottom: 100px;
+        width: 100px;
+        padding: 4px;
 }
 .signup-firstName{
     position: absolute;
     bottom: 100px;
     width: 100px;
+    padding: 4px;
 }
-
+.signup-password{
+    position: relative;
+    top: 5px;
+    padding: 6px;
+    width: 220px;
+    color: rgb(53, 51, 51)
+    
+}
+.signup-email{
+    position: relative;
+    top: 5px;
+    padding: 6px;
+    width: 220px;
+    color: rgb(53, 51, 51)
+}
+.signup-password-label{
+    position: relative;
+    top: 10px;
+    color: rgb(53, 51, 51);
+    font-size: 85%;
+}
+.signup-email-label{
+    color: rgb(53, 51, 51);
+    font-size: 85%;
+}
+.login-password{
+    position: relative;
+    top: -10px;
+    padding: 6px;
+    width: 230px;
+}
+.login-email{
+    position: relative;
+    top: -15px;
+    padding: 6px;
+    width: 230px;
+    
+}
 .footer{
     background-color: rgb(228, 228, 228);
     // height: 25px;
@@ -162,7 +209,7 @@ input{
     list-style-type: none;
 }
 #github{
-    color: black;
+    color: rgb(179, 176, 176);
 }
 
 #login-footer{
@@ -177,12 +224,12 @@ input{
 .demo-button{
     background-color:  #3e78ad;
     position: absolute;
-    left: 324px;
-    bottom: 204px;
+    left: 320px;
+    bottom: 185px;
     border: 1px solid #3a66ad;
     box-shadow: 0 1px 1px 0 rgba(200,200,200,0.6);
     color: #fff;
-    padding: 2px;
+    padding: 5px;
     border-radius: 3px;
     font-size: 100%;
     width: 120px;
@@ -191,66 +238,87 @@ input{
 
 #first-name{
     font-weight: normal;
-    font-size: 100%;
+    font-size: 85%;
     white-space: nowrap;
-    position: absolute;
-    bottom: 105px;
-    left: 0px;
-
+    position: relative;
+    top: 17px;
+    color: rgb(53, 51, 51);
+    
 }
 
 #last-name{
     font-weight: normal;
-    font-size: 100%;
+    font-size: 85%;
     white-space: nowrap;
     position: absolute;
-    bottom: 100px;
+    bottom: 114px;
     left: 120px;
-
+    color: rgb(53, 51, 51)
+   
 }
 
 #login-att{
-    font-weight: bold;
+    position: relative;
+    top: 10px;
+    // left: 1px;
+    font-weight: 1px bolder;
     font-size: 100%;
-    position: absolute;
-    bottom: 40px;
-    left: 1px;
+    color: black;
 }
 
 #signup-att{
     font-weight: bold;
     font-size: 100%;
-    position: absolute;
-    bottom: 120px;
+    position: relative;
+    top: 27px;
     left: 0px;
+    color: black;
 }
 
 
 .login-errors{
     position: absolute;
-    top: 100px;
-    right: -5px;
+    top: 150px;
+    right: 400px;
 }
 .signup-errors{
     position: absolute;
-    top: 100px;
-    right: -5px;
+    top: 150px;
+    right: 330px;
+    // border-radius: 10px;
+}
+#login-error{
+    border-radius: 5px;
+    color: rgb(243, 71, 71);
+    width: 200px;
+    padding: 2px;
+    list-style-position:inside;
+    border: 1px solid rgb(243, 71, 71);
+    font-size: 90%;
+    display: block;
 }
 #error{
+    border-radius: 5px;
     list-style-position:inside;
    color: rgb(243, 71, 71);
    /* display: inline; */
    display: block;
    border: 1px solid rgb(243, 71, 71);
    font-size: 90%;
-   width: 200px;
-    margin: 1px;
+   width: 290px;
+   height: 15px;
+    margin: 10px;
+    padding: 2px;
+    text-align: center;
+    // position: relative;
+    // top: 10px;
 }
 .error-link{
+    font-size: 100%;
     color: rgb(243, 71, 71);
     position: absolute;
-    right: 45px;
-    top: 34.5px;
+    right: 100px;
+    top: 29px;
     background: none;
     border: none;
     margin: none;

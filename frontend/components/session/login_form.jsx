@@ -73,7 +73,7 @@ class LoginForm extends React.Component {
         return(
           <div className="login-errors">
           <ul>
-                <li id="error">No account found for this email. Retry, or  <button className="error-link" onClick={() => this.hideComponent("showSignup")}>
+                <li id="login-error">No account found for this email. Retry, or  <button className="error-link" onClick={() => this.hideComponent("showSignup")}>
                 Sign up for Korra
               </button></li> 
           </ul>
@@ -106,7 +106,7 @@ class LoginForm extends React.Component {
               <input type="text"
                 value={this.state.email}
                 onChange={this.update('email')}
-                className="login-input"
+                className="login-email"
                 placeholder="Email"
                 />
             <br/>
@@ -114,7 +114,7 @@ class LoginForm extends React.Component {
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
-                className="login-input"
+                className="login-password"
                 placeholder="Password"
                 />
             <br/>
