@@ -9,7 +9,7 @@ class QuestionIndexItem extends React.Component {
     return (
       <div className="question-item">
         <div>
-            <h1 id="question-header">{question.author.last_name + " " + question.author.last_name }</h1>
+            <h1 id="question-header">{question.author.first_name + " " + question.author.last_name }</h1>
         <p id="question-body">{question.body}</p>
         </div>
       </div>
