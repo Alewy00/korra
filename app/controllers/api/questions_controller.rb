@@ -19,8 +19,7 @@ class Api::QuestionsController < ApplicationController
     def show
         @question = Question.find_by(id: params[:id])
         render "api/questions/show"
-    end 
-
+    end
     def update
         @question = Question.find(params[:id])
         if @question.update(question_params)

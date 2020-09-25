@@ -5,7 +5,7 @@ export const RECEIVE_ALL_QUESTIONS = "RECEIVE_ALL_QUESTIONS";
 export const DELETE_QUESTION = "DELETE_QUESTION";
 
 
-export const receiveQuestion = question => ({
+export const showQuestion = question => ({
     type: RECEIVE_QUESTION,
     question
 })
@@ -34,12 +34,12 @@ export const askQuestion = question => dispatch => (
 
 export const recieveQuestion = questionId => dispatch => (
     QuestionAPI.recieveQuestion(questionId)
-        .then(question => dispatch(receiveQuestion(question)))
+        .then(question => dispatch(showQuestion(question)))
 )
 
 export const deleteQuestion = question => dispatch => (
     QuestionAPI.deleteQuestion(question)
-    .then(question => (dispatch(removeQuestion(question.id)))
+    .then(() => (dispatch(removeQuestion(question.id)))
 ))
 
 

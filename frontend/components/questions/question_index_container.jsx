@@ -6,7 +6,6 @@ import { recieveAllQuestions, deleteQuestion } from "../../actions/question_acti
 const mapStateToProps = (state) => ({
     questions: state.entities.questions,
     currentUser: state.session.currentUser,
-    // author : state.entities.questions.author_id
 })
 
 const mapDispatchToProps = dispatch => ({

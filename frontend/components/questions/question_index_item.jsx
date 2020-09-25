@@ -10,7 +10,8 @@ class QuestionIndexItem extends React.Component {
       <div className="question-item">
         <div>
             <h1 id="question-header">{question.author.first_name + " " + question.author.last_name }</h1>
-        <p id="question-body">{question.body}</p>
+          <Link className ="question-link"to={`/questions/${question.id}`}>{question.body}</Link>
+        {/* <p id="question-body">{question.body}</p> */}
         </div>
       </div>
     );

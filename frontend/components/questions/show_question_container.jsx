@@ -1,15 +1,19 @@
-import {recieveQuestion} from '../../util/question_util'
+import React from "react";
+import { connect } from "react-redux";
+import showQuestion from "./show_question";
+import { recieveQuestion } from "../../actions/question_actions";
 
 
 
-const mapStateToProps = (state, ownProps) => ({
-    question: state.entities.questions[ownProps.match.params.questionId],
+const mapStateToProps = (state, { match }) => ({
+    questionId: parseInt(match.params.id),
     users: state.users,
     currentUser: state.session.currentUser
 })
 
 const mapDispatchToProps = dispatch => ({
     recieveQuestion: questionId => dispatch(recieveQuestion(questionId)),
+    
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(QuestionShow);
+export default connect(mapStateToProps, mapDispatchToProps)(showQuestion);

@@ -14,7 +14,7 @@ const questionReducer = (state = {}, action) => {
         case RECEIVE_QUESTION:
             return Object.assign({}, state, { [action.question.id]: action.question });
         case DELETE_QUESTION:
-            newState[action.questionId] = null;
+            delete newState[action.questionId];
             return newState;
         default:
             return state;

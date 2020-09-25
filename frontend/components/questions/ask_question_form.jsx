@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter, Redirect } from 'react-router-dom';
-
+import QuestionIndex from './question_index_container'
 
 class AskQuestion extends React.Component {
     constructor(props) {
@@ -42,9 +42,10 @@ class AskQuestion extends React.Component {
     render() {
         const { currentUser } = this.props;
       
-    
+        
       return (
           <div>
+              <QuestionIndex />
           <div className="ask">
             <h1></h1>
             <button className="ask-q-button" onClick={this.handleQuestion}>

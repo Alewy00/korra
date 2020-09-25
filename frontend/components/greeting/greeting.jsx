@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import QuestionIndex from '../questions/question_index_container'
 
 const Greeting = ({ currentUser, logout }) => {
     const sessionLinks = () => (
@@ -9,10 +9,13 @@ const Greeting = ({ currentUser, logout }) => {
       </div>
     );
     const personalGreeting = () => (
-    <div>
-      <Link to="/login" id="korra-taskbar">Korra</Link>
+      <div className="MAIN">
+      {/* <QuestionIndex /> */}
+    <div className="taskbar">
+      <Link to="/" id="korra-taskbar">Korra</Link>
       <div className="logout">
         <button onClick={logout}>Log Out</button>
+      </div>
       </div>
       </div>
 
