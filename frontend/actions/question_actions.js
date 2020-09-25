@@ -39,7 +39,7 @@ export const recieveQuestion = questionId => dispatch => (
 
 export const deleteQuestion = question => dispatch => (
     QuestionAPI.deleteQuestion(question)
-    .then(question => (dispatch(removeQuestion(question)))
+    .then(question => (dispatch(removeQuestion(question.id)))
 ))
 
 
