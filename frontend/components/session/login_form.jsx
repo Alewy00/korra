@@ -20,6 +20,10 @@ class LoginForm extends React.Component {
     switch (name) {
       case "showSignup":
         this.setState({ showSignup: !this.state.showSignup });
+        this.renderErrors()
+        if(this.state.showSignup === false){
+          // this.renderErrors();
+        }
         break;
       default:
         null;
@@ -44,12 +48,13 @@ class LoginForm extends React.Component {
   }
   
   renderErrors() {
-        if(this.props.errors.length === 0){
-            return(
-              <div></div>
-            )
+      if(this.props.errors.length === 0){
+          return(
+                 <div></div>
+           )
         }
-        if(this.props.errors.length > 1){
+       if(this.state.showSignup === true  && this.props.errors.length > 1  ){
+          console.log("hit full")
           return(
             <div className="signup-errors">
 
@@ -64,16 +69,17 @@ class LoginForm extends React.Component {
         </div>
           )
       }
-
-    return(
-      <div className="login-errors">
-      <ul>
-            <li id="error">No account found for this email. Retry, or  <button className="error-link" onClick={() => this.hideComponent("showSignup")}>
-            Sign up for Korra
-          </button></li> 
-      </ul>
-      </div>
-    );
+      else if (this.props.errors.length === 1 ) {
+        return(
+          <div className="login-errors">
+          <ul>
+                <li id="error">No account found for this email. Retry, or  <button className="error-link" onClick={() => this.hideComponent("showSignup")}>
+                Sign up for Korra
+              </button></li> 
+          </ul>
+          </div>
+        );
+      }
   }
   
   render() {
@@ -118,7 +124,7 @@ class LoginForm extends React.Component {
           <div className="footer">
             <ul id="login-footer"> 
             <li id="about">About</li>
-            <li ><a id="github" href="https://github.com/Alewy00/korra">Github</a> </li>
+            <li ><a id="github"href="https://github.com/Alewy00/korra">Github</a> </li>
             <li>Careers </li>
             <li>Businesses</li>
             <li>Privacy Terms </li>

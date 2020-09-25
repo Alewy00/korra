@@ -43,7 +43,7 @@ class SignupForm extends React.Component {
     return (
       <div className="signup-model">
         <form onSubmit={this.handleSubmit} className="signup-form-box">
-          {/* {this.renderSignupErrors()} */}
+   
          <h6 id="signup-att">Sign up</h6> 
           <div className="signup-attributes">
             <h3 id="first-name">First name </h3>

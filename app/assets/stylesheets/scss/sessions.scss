@@ -57,9 +57,9 @@ input .login-attributes {
 
 
 .login-module{
-    position: absolute;
+    position: relative;
     top: 50px;
-    right: 300px;
+    right: -320px;
     background-image: image-url('korra-white.jpg');
     width: 600px;
     height: 500px;
@@ -67,6 +67,18 @@ input .login-attributes {
     
 
 }
+input{
+    background-color: rgb(235, 232, 232);
+    // border-color:  rgb(235, 232, 232) ;
+    border-width: thin;
+    border-color:rgb(142, 148, 139) ;
+    // border: none;
+    border-radius: 3px;
+    // box-shadow: 1px 1px;
+    box-shadow:  rgb(235, 232, 232);
+}
+
+
 
 .login-form-box{
     position: absolute;
@@ -77,22 +89,30 @@ input .login-attributes {
 
 .login-submit{
     position: absolute;
-    left: 125px;
-    top: 90px;
+    left: 110px;
+    top: 85px;
     background: #3e78ad;
     color: #fff;
     border: 1px solid #3a66ad;
     box-shadow: 0 1px 1px 0 rgba(200,200,200,0.6);
+    padding: 2px;
+    border-radius: 3px;
+    font-size: 100%;
+    width: 60px;
 }
 
 .signup-submit{
     position: absolute;
-    left: 167px;
+    left: 145px;
     top: 170px;
     background: #3e78ad;
     color: #fff;
     border: 1px solid #3a66ad;
     box-shadow: 0 1px 1px 0 rgba(200,200,200,0.6);
+    padding: 2px;
+    border-radius: 3px;
+    font-size: 100%;
+    width: 80px;
 }
 
 .signup-button{
@@ -157,12 +177,15 @@ input .login-attributes {
 .demo-button{
     background-color:  #3e78ad;
     position: absolute;
-    left: 350px;
-    bottom: 210px;
+    left: 324px;
+    bottom: 204px;
     border: 1px solid #3a66ad;
     box-shadow: 0 1px 1px 0 rgba(200,200,200,0.6);
     color: #fff;
-    font-size: 80%;
+    padding: 2px;
+    border-radius: 3px;
+    font-size: 100%;
+    width: 120px;
 
 }
 
@@ -221,6 +244,7 @@ input .login-attributes {
    border: 1px solid rgb(243, 71, 71);
    font-size: 90%;
    width: 200px;
+    margin: 1px;
 }
 .error-link{
     color: rgb(243, 71, 71);

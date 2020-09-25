@@ -13,7 +13,6 @@ export const recieveQuestion = questionId => (
     })
 )
 
-
 export const recieveAllQuestions = () => (
     $.ajax({
         url: '/api/questions',
