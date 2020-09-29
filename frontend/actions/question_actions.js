@@ -20,7 +20,7 @@ export const removeQuestion = questionId => ({
     questionId
 })
 
-//thunks 
+
 
 export const recieveAllQuestions = () => dispatch => (
     QuestionAPI.recieveAllQuestions()

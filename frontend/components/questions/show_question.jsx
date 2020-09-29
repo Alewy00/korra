@@ -3,6 +3,7 @@ import React from "react";
 import IndexItem from './question_index_item'
 import EditQuestion from './edit_question_container'
 import {Link} from 'react-router-dom';
+import Answers from '../answers/answers_container'
 class QuestionShow extends React.Component {
 
     constructor(props) {
@@ -58,6 +59,9 @@ class QuestionShow extends React.Component {
         <div className="q-show">
             <div className="show-item">
             {this.state.question.body}
+            </div>
+            <div className="answers">
+                    < Answers questionId={this.state.question.id} />
             </div>
             {/* <div className="edit-form"> */}
                 {/* <EditQuestion question={this.state.question} key={this.state.question.id}/> */}

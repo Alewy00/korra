@@ -6,8 +6,29 @@
 #                           POST   /api/session(.:format)                                                                   api/sessions#create {:format=>:json}
 #             api_questions GET    /api/questions(.:format)                                                                 api/questions#index {:format=>:json}
 #                           POST   /api/questions(.:format)                                                                 api/questions#create {:format=>:json}
+#          new_api_question GET    /api/questions/new(.:format)                                                             api/questions#new {:format=>:json}
 #         edit_api_question GET    /api/questions/:id/edit(.:format)                                                        api/questions#edit {:format=>:json}
 #              api_question GET    /api/questions/:id(.:format)                                                             api/questions#show {:format=>:json}
+#                           PATCH  /api/questions/:id(.:format)                                                             api/questions#update {:format=>:json}
+#                           PUT    /api/questions/:id(.:format)                                                             api/questions#update {:format=>:json}
+#                           DELETE /api/questions/:id(.:format)                                                             api/questions#destroy {:format=>:json}
+#               api_answers GET    /api/answers(.:format)                                                                   api/answers#index {:format=>:json}
+#                           POST   /api/answers(.:format)                                                                   api/answers#create {:format=>:json}
+#            new_api_answer GET    /api/answers/new(.:format)                                                               api/answers#new {:format=>:json}
+#           edit_api_answer GET    /api/answers/:id/edit(.:format)                                                          api/answers#edit {:format=>:json}
+#                api_answer GET    /api/answers/:id(.:format)                                                               api/answers#show {:format=>:json}
+#                           PATCH  /api/answers/:id(.:format)                                                               api/answers#update {:format=>:json}
+#                           PUT    /api/answers/:id(.:format)                                                               api/answers#update {:format=>:json}
+#                           DELETE /api/answers/:id(.:format)                                                               api/answers#destroy {:format=>:json}
+#      api_question_answers GET    /api/questions/:question_id/answers(.:format)                                            api/answers#index {:format=>:json}
+#                           POST   /api/questions/:question_id/answers(.:format)                                            api/answers#create {:format=>:json}
+#                           GET    /api/questions(.:format)                                                                 api/questions#index {:format=>:json}
+#                           POST   /api/questions(.:format)                                                                 api/questions#create {:format=>:json}
+#                           GET    /api/questions/new(.:format)                                                             api/questions#new {:format=>:json}
+#                           GET    /api/questions/:id/edit(.:format)                                                        api/questions#edit {:format=>:json}
+#                           GET    /api/questions/:id(.:format)                                                             api/questions#show {:format=>:json}
+#                           PATCH  /api/questions/:id(.:format)                                                             api/questions#update {:format=>:json}
+#                           PUT    /api/questions/:id(.:format)                                                             api/questions#update {:format=>:json}
 #                           DELETE /api/questions/:id(.:format)                                                             api/questions#destroy {:format=>:json}
 #                      root GET    /                                                                                        static_pages#root
 #        rails_service_blob GET    /rails/active_storage/blobs/:signed_id/*filename(.:format)                               active_storage/blobs#show
@@ -22,6 +43,12 @@ Rails.application.routes.draw do
     resource :user, only: [:create]
     resource :session, only: [:create, :destroy]
     resources :questions
+    resources :answers 
+    resources :questions do
+      resources :answers, only:[:index, :create] 
+    end
+
+
 
   end
   root "static_pages#root"

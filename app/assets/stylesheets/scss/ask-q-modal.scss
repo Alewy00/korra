@@ -23,6 +23,7 @@
     border: 1px solid #888;
     width: 600px; 
     height: 450px;
+    border-radius: 20px;
   }
   .tips{
     position: relative;
@@ -125,14 +126,18 @@
 
   }
   .grey-top{
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
     position: relative;
-    top: -80px;
+    top: -82px;
     right: 21px;
     background-color: #dee0e1;
     width: 641.5px;
     height: 50px;
   }
   .module-footer{
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
     position: relative;
     bottom: -89px;
     left: -21px;

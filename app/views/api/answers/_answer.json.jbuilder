@@ -1,0 +1,1 @@
+json.extract! answer, :question, :author, :id, :body
