@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter, Redirect } from 'react-router-dom';
 import QuestionIndex from './question_index_container'
+import {Route, Link} from 'react-router-dom';
 
 class AskQuestion extends React.Component {
     constructor(props) {
@@ -59,6 +60,7 @@ class AskQuestion extends React.Component {
           </div>
           <div id="modal" className="modal-main hide">
           <button className="x" onClick={this.handleCancel}>x</button>
+          {/* <Link to="/" className="x"><button className="close-question-button">x</button></Link> */}
           <button className="close-button" onClick={this.handleCancel}>Close</button>
           <form onSubmit={this.handleSubmit} className="q-form-box">
           <div className="ask-question-component">

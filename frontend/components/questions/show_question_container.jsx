@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import showQuestion from "./show_question";
 import { recieveQuestion } from "../../actions/question_actions";
-
+import { deleteQuestion } from "../../actions/question_actions";
 
 
 const mapStateToProps = (state, { match }) => ({
@@ -13,7 +13,7 @@ const mapStateToProps = (state, { match }) => ({
 
 const mapDispatchToProps = dispatch => ({
     recieveQuestion: questionId => dispatch(recieveQuestion(questionId)),
-    
+    deleteQuestion: question => dispatch(deleteQuestion(question))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(showQuestion);

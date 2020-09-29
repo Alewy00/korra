@@ -15,7 +15,6 @@ class QuestionIndex extends React.Component {
 
 
   handleDelete(question) {
-    
     this.props.deleteQuestion(question)
   }
   

@@ -27,15 +27,15 @@ export const recieveAllQuestions = () => dispatch => (
         .then(questions => dispatch(receiveAllQuestions(questions)))
 )
 
-export const askQuestion = question => dispatch => (
-    QuestionAPI.askQuestion(question)
-        .then(question => dispatch(receiveQuestion(question)))
-)
-
 export const recieveQuestion = questionId => dispatch => (
     QuestionAPI.recieveQuestion(questionId)
-        .then(question => dispatch(showQuestion(question)))
-)
+    .then(question => dispatch(showQuestion(question)))
+    )
+    
+    export const askQuestion = question => dispatch => (
+        QuestionAPI.askQuestion(question)
+            .then(question => dispatch(recieveQuestion(question.id)))
+    )
 
 export const deleteQuestion = question => dispatch => (
     QuestionAPI.deleteQuestion(question)
