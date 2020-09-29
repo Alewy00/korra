@@ -8,7 +8,7 @@
     left: 0;
     top: 0;
     width: 100%; 
-    height: 100%; 
+    height: 200%; 
     overflow: auto; 
     background-color: rgb(0,0,0); 
     background-color: rgba(0,0,0,0.4);
@@ -26,10 +26,11 @@
   }
   .tips{
     position: relative;
+    top: -50px;
     left: 10px;
     background-color: hsl(227, 53%, 93%);
-    height: 110px;
-    width: 500px;
+    height: 120px;
+    width: 510px;
   }
 
   .question-submit{
@@ -63,7 +64,8 @@
   }
   #who-asked{
     position: relative;
-    left: 10px;
+    left: 15px;
+    top: -10px;
     font-size: 16px;
     color: #939598;
   }
@@ -75,7 +77,7 @@
     min-height: 38px;
     width: 550px;
     box-sizing: border-box;
-    overflow: hidden;
+    // overflow: hidden;
     border-top-style: hidden;
     border-right-style: hidden;
     border-left-style: hidden;
@@ -91,9 +93,9 @@
 
   .x {
     z-index: 1;
-    position: absolute;
-    right: 315px;
-    top: 44px;
+    position: relative;
+    right: -440px;
+    top: -20px;
     color: black;
     // float: right;
     font-size: 24px;
@@ -104,9 +106,9 @@
   }
   .close-button{
     z-index: 2;
-    position: absolute;
-    top: 480px;
-    left: 670px;
+    position: relative;
+    top: 422px;
+    left: 345px;
     background: none;
     color:grey;
     font-weight: bolder;
@@ -124,7 +126,7 @@
   }
   .grey-top{
     position: relative;
-    top: -35px;
+    top: -80px;
     right: 21px;
     background-color: #dee0e1;
     width: 641.5px;
@@ -132,8 +134,8 @@
   }
   .module-footer{
     position: relative;
-    bottom: -146px;
-    left: -20px;
+    bottom: -89px;
+    left: -21px;
     background-color: #dee0e1;
     width: 640.5px;
     height: 50px;

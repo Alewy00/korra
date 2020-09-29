@@ -20,6 +20,7 @@ class Api::QuestionsController < ApplicationController
         @question = Question.find_by(id: params[:id])
         render "api/questions/show"
     end
+    
     def update
         @question = Question.find(params[:id])
         if @question.update(question_params)

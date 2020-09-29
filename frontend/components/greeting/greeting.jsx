@@ -10,12 +10,9 @@ const Greeting = ({ currentUser, logout }) => {
     );
     const personalGreeting = () => (
       <div className="MAIN">
-      {/* <QuestionIndex /> */}
     <div className="taskbar">
       <Link to="/" id="korra-taskbar">Korra</Link>
-      <div className="logout">
-        <button onClick={logout}>Log Out</button>
-      </div>
+      <button className="logout" onClick={logout}>Log Out</button>
       </div>
       </div>
 

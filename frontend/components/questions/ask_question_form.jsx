@@ -17,7 +17,7 @@ class AskQuestion extends React.Component {
 
     handleSubmit(e) {        
         e.preventDefault();
-        this.props.askQuestion(this.state).then(this.setState({title: ''})) 
+        this.props.askQuestion(this.state).then(this.setState({body: ''})) 
         this.handleCancel()
     }
 
@@ -42,13 +42,10 @@ class AskQuestion extends React.Component {
 
     render() {
         const { currentUser } = this.props;
-      
-        
       return (
           <div>
               <QuestionIndex />
           <div className="ask">
-            <h1></h1>
             <button className="ask-q-button" onClick={this.handleQuestion}>
                 <span className="button-username">
                         {currentUser.first_name}
@@ -59,12 +56,12 @@ class AskQuestion extends React.Component {
             </button>
           </div>
           <div id="modal" className="modal-main hide">
-          <button className="x" onClick={this.handleCancel}>x</button>
           {/* <Link to="/" className="x"><button className="close-question-button">x</button></Link> */}
-          <button className="close-button" onClick={this.handleCancel}>Close</button>
           <form onSubmit={this.handleSubmit} className="q-form-box">
           <div className="ask-question-component">
           <div className="modal-content">
+          <button type="button" className="close-button" onClick={this.handleCancel}>Close</button>
+          <button type="button" className="x" onClick={this.handleCancel}>x</button>
           <div className="grey-top">
             <h1 id="ask-q">Add Question</h1>
           </div>

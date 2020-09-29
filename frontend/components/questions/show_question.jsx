@@ -1,6 +1,8 @@
 
 import React from "react";
 import IndexItem from './question_index_item'
+import EditQuestion from './edit_question_container'
+import {Link} from 'react-router-dom';
 class QuestionShow extends React.Component {
 
     constructor(props) {
@@ -8,17 +10,12 @@ class QuestionShow extends React.Component {
         this.state = {
           question: {},
         }
-    
         this.props.recieveQuestion( this.props.questionId )
         .then((question) => {
           this.setState(question);
         });
-        // console.log(this.state.question)
       }
 
-      componentDidMount(){
-      
-      }
 
     handleDelete(question) {
         this.props.deleteQuestion(question).then(() => {
@@ -27,15 +24,23 @@ class QuestionShow extends React.Component {
       }
 
       editButtons(question) {
-          console.log("hit edit")
         if (question.author_id === this.props.currentUser.id) {
           return (
-            <div className="delete-button">
-                <button className="delete-button" onClick={() => this.handleDelete(question)}>Delete</button>
+            <div className="edit-buttons">
+            {/* <div > */}
+                {/* <button className="delete-button" onClick={() => this.handleDelete(question)}>Delete Question</button> */}
+              {/* </div> */}
+              <div className="edit-form">
+                <EditQuestion question={question} key={question.id}/>
               </div>
+             </div>
             )
           }
         }
+        suggest(){
+          this.props.history.push('/');
+        }
+      
      
 
     render(){
@@ -47,16 +52,23 @@ class QuestionShow extends React.Component {
             return true;
         }
 //   const question = this.props.recieveQuestion(this.props.questionId )
-        console.log("hi")
-        console.log(!isEmpty(this.state.question))
         if(!isEmpty(this.state.question)){
         return(
+
         <div className="q-show">
             <div className="show-item">
-            <IndexItem question={this.state.question} key={this.state.question.id} />
+            {this.state.question.body}
             </div>
-            {/* <h1>{this.props.questionId}</h1> */}
+            {/* <div className="edit-form"> */}
+                {/* <EditQuestion question={this.state.question} key={this.state.question.id}/> */}
+            {/* </div> */}
             {this.editButtons(this.state.question)}
+            <div className="suggested">
+              <h1 id="suggest-header">Suggested Questions</h1>
+               <h2><Link className ="suggest-link" to="/questions/88">Do you think my wife will care if I murdered many children in order to save her life?</Link></h2>
+               <h2><Link className ="suggest-link"to="/questions/89">..................</Link></h2>
+               <h2><Link className ="suggest-link"to="/questions/90">Do you think I may have dual-personality disorder? No of course you don't, the precious told us so! Oh good I was worried for a second</Link></h2>
+            </div>
         </div>
         )
  

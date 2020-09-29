@@ -41,6 +41,11 @@ export const deleteQuestion = question => dispatch => (
     QuestionAPI.deleteQuestion(question)
     .then(() => (dispatch(removeQuestion(question.id)))
 ))
+export const updateQuestion = question => dispatch => (
+    QuestionAPI.updateQuestion(question)
+    .then(question => (dispatch(showQuestion(question))),
+    )
+)
 
 
 

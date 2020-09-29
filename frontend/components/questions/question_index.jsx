@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import IndexItem from './question_index_item'
+import EditQuestion from './edit_question'
 
 class QuestionIndex extends React.Component {
  
@@ -39,7 +40,7 @@ class QuestionIndex extends React.Component {
             {questions.map((question, i) => (
                 <li key={i} className="question-items">
                   <IndexItem question={question} key={question.id} />
-                    {this.editButtons(question)}
+                    {/* {this.editButtons(question)} */}
                 </li>
                 ))}
           </ul>

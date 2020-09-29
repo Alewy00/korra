@@ -26,3 +26,12 @@ export const deleteQuestion = question => (
     })
    
 );
+export const updateQuestion = question => (
+    $.ajax({
+        url: `/api/questions/${question.id}`,
+        method: 'PATCH',
+        data: {
+            question
+        }
+    })
+);

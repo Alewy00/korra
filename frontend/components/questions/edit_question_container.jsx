@@ -1,9 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
-import showQuestion from "./show_question";
-import { recieveQuestion } from "../../actions/question_actions";
+import editQuestion from "./edit_question";
+import { updateQuestion } from "../../actions/question_actions";
 import { deleteQuestion } from "../../actions/question_actions";
-import {Link} from 'react-router-dom';
+import { withRouter } from "react-router-dom";
 
 const mapStateToProps = (state, { match }) => ({
     questionId: parseInt(match.params.id),
@@ -12,8 +12,8 @@ const mapStateToProps = (state, { match }) => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-    recieveQuestion: questionId => dispatch(recieveQuestion(questionId)),
+    updateQuestion: questionId => dispatch(updateQuestion(questionId)),
     deleteQuestion: question => dispatch(deleteQuestion(question))
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(showQuestion);
+export default withRouter( connect(mapStateToProps, mapDispatchToProps)(editQuestion));
