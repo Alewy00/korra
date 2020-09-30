@@ -28,34 +28,32 @@ class QuestionIndexItem extends React.Component {
               alone={true}
                />
       ) 
-    }else{
+    }
+  }
+
+    author(){
+      if(!this.state.answers.length > 0){
       return(
         <div>
-          <h3 id="no-author">No Author</h3>
         <div className="no-answer">
           No Answers yet!
         </div>
-
         </div>
       )
     }
+    
   }
+    
 
   render() {
     const question = this.props.question;
     return (
       <div className="question-item">
-        <div>
-            {/* <h1 id="question-header">{question.author.first_name + " " + question.author.last_name }</h1> */}
           <Link className ="question-link"to={`/questions/${question.id}`}>{question.body}</Link>
-          <div>
             <div className="question-answer">
               {this.answer()}
             </div>
-
-         
-          </div>
-        </div>
+          {this.author()}
       </div>
     );
   }

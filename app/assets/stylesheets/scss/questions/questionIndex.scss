@@ -11,8 +11,18 @@
 .question-index{
     position: absolute;
     // margin: auto;
-    right: 335px;
-    top: 200px;
+    right: 330px;
+    top: 150px;
+}
+.alone{
+    display: none;
+    position: relative;
+    top: -40px;
+    border: none;
+    background-color: white ;
+    padding: 2px;
+    // z-index: 1;
+
 }
 
 .question-list{
@@ -44,21 +54,6 @@
 
 }
 
-// #question-header{
-//     position: relative;
-//     left: 70px;
-//     top: 0px;
-//     color:black;
-//     font-size: 15px;
-   
-// }
-
-// #question-body{
-//     color:black;
-//     font-size: 25px;
-   
-    
-// }
 
 .question-link{
     // text-align: center;
@@ -87,17 +82,17 @@
 }
 #index-header{
     position: absolute;
-    top: -90px;
+    top: -70px;
     left: 30px;
     font-size: 17px;
     // margin: 1px;
 }
 
-#no-author{
+.no-answer{
     position: relative;
     font-size: 17px;
-    top: -60px;
-    left: 30px;
+    top: 70px;
+    // left: 30px;
 }
 
 

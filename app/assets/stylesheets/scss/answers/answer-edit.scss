@@ -1,29 +1,33 @@
 .a-drop-button{
     position: relative;
-    // position: absolute;
-    // top: 140px;
-    // left: 650px;
+    width: 40px;
+    top: 73px;
+    left: 100px;
     border: none;
-    background-color: white;
+    background-color: #ebe9e9 ;
     padding: 2px;
+    // z-index: 1;
+    
 }
 
 .modal-edit {
     display: none; 
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     left: -65px;
     top: -200px;
     width: 200%; 
-    height: 800%; 
+    height: 200%; 
     overflow: auto; 
     background-color: rgb(0,0,0); 
     background-color: rgba(0,0,0,0.4);
+
   }
 
 .edit-a-modal-content{
     position: relative;
-    top: -300px;
+    // margin: auto;
+    top: -100px;
     right: 650px;
     background-color: #fefefe;
     margin: 15% auto; 
@@ -32,12 +36,6 @@
     width: 600px; 
     height: 450px;
     border-radius: 20px;
+    z-index: 1;
 }
 
-.edit-dropdown{
-    // border: none;
-    position: absolute;
-    // width: 10px;
-    top: -40px;
-    left: 500px;
-}

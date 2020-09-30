@@ -9,13 +9,20 @@ class editAnswer extends React.Component {
             body: this.props.answer.body,
             answer: this.props.answer,
             show: false,
+            Klass: "a-drop-button"
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         // this.handleCancel = this.handleSubmit.bind(this);
         this.handleBlur = this.handleBlur.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.handleDelete = this.handleDelete.bind(this);
-       
+        
+      }
+      
+      componentDidMount(){
+        if(this.props.alone){
+          this.setState({Klass: 'alone'})
+        }
      }
 
 
@@ -56,11 +63,9 @@ class editAnswer extends React.Component {
 
     render() {
         const { currentUser } = this.props;
+       
       return (
           <div>
-          <div className="edit">
-            {/* <button className="edit-q-button" onClick={this.handleQuestion}>Edit Question</button> */}
-          </div>
           <div id="edit-a-modal" className="modal-edit">
           <form onSubmit={this.handleSubmit} className="edit-form-box">
           <div className="edit-question-component">
@@ -94,7 +99,7 @@ class editAnswer extends React.Component {
       </form>
        </div>
        <div className="edit-dropdown">
-          <button className="a-drop-button" type="button" onBlur={this.handleBlur} onClick={this.handleClick} >
+          <button className={this.state.Klass} type="button" onBlur={this.handleBlur} onClick={this.handleClick} >
               . . .
               {this.state.show ? (
                 <ul className="dropdown-list" onClick={e => e.stopPropagation()}>

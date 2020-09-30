@@ -8,7 +8,7 @@ class AnswerItem extends React.Component {
     console.log(answer)
     if (answer.author.id === this.props.currentUser.id) {
       return (
-            <EditAnswer answer={answer} />
+            <EditAnswer answer={answer} alone={this.props.alone} />
         )
       }
   }
@@ -18,12 +18,16 @@ class AnswerItem extends React.Component {
         return <h2 id="index-header">{answer.author.first_name + " " + answer.author.last_name }</h2>
       }else{
         return(
-        <div>
           <h2 id="answer-header">{answer.author.first_name + " " + answer.author.last_name }</h2>
+        )
+      }
+    }
+    aloneLine(){
+      if(!this.props.alone){
+        return(
             <div className="thin-line">
                     __________________________________________________________________________
             </div>
-        </div>
         )
       }
     }
@@ -32,12 +36,12 @@ class AnswerItem extends React.Component {
     const answer = this.props.answer;
     return (
       <div className="answer-item">
-        {/* <h2 id="answer-header">{answer.author.first_name + " " + answer.author.last_name }</h2> */}
-        <p id="answer-body">{answer.body}</p>
-        <div className="edit-answer">
-         {this.editButtons(answer)}
-         </div>
+             <div className="edit-answer">
+               {this.editButtons(answer)}
+              </div> 
             {this.alone()}
+        <p id="answer-body">{answer.body}</p>
+        {this.aloneLine()}
       </div>
     );
   }
