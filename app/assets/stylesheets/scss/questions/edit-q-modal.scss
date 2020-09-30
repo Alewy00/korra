@@ -1,7 +1,7 @@
 .edit-module-footer{
     position: relative;
-    bottom: -300px;
-    left: -20px;
+    bottom: -256px;
+    left: -21px;
     background-color: #dee0e1;
     width: 640.5px;
     height: 50px;
@@ -25,7 +25,7 @@
 .edit-close{
     z-index: 2;
     position: relative;
-    top: 455px;
+    top: 442px;
     left: 345px;
     background: none;
     color:grey;
@@ -41,15 +41,33 @@
     display: inline-block;
   }
 
+  #edit-text{
+    resize: none;
+    min-height: 70px;
+    max-height: 100px;
+    font-size: 15px;
+    padding: 10px;
+    // height:38px;
+    // min-height: 38px;
+    width: 550px;
+    box-sizing: border-box;
+    // overflow: hidden;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+  }
+
 
    
 .drop-button{
     position: absolute;
-    top: 160px;
-    left: 720px;
+    top: 140px;
+    left: 650px;
     border: none;
-    // background-color: white;
+    background-color: #ebe9e9;
     padding: 2px;
+    
    
 }
 
@@ -58,39 +76,37 @@
     width: 50px;
     padding: 0;
     margin: 0;
-    // background-color: white;
+    position: relative;
+    left: 1px;
+    background-color: rgb(192, 34, 34);
+    height: 55px;
+    text-align: center;
+    // border-radius: 10px;
 
    
 }
 .drop-item{
     position: relative;
     top: 10px;
-    left: -10px;
+    left: -5px;
     // color:  #939598;
-    margin: 20px;
-}
-#suggest-header{
-    font-size: 17px;
-}
-.suggest-link{
-color: #195faa;
-text-decoration: none;
-list-style: none;
-font-size: 15px;
-font-weight: lighter;
+    margin: 10px;
+    width: 50px;
+    color: white;
+    text-indent: -10px;
+    
 }
 
-.suggest-link:hover{
-    text-decoration: underline;
-}
-
-.suggested{
+.drop-item:hover{
     position: relative;
-    top: 20px;
-    width: 400px;
-    right: -800px;
-    overflow-wrap: break-word;
+    left: -10px;
+    background-color:  #ebe9e9;
+    width: 50px;
+    height: 15px;
+    color:  rgb(192, 34, 34);
+    
 }
+
 
 
 

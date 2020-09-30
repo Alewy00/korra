@@ -6,7 +6,8 @@ import { receiveAllAnswers } from "../../actions/answer_actions";
 
 const mapStateToProps = (state) => ({
     questions: state.entities.questions,
-    answers: state.entities.answers
+    answers: state.entities.answers,
+    currentUser: state.session.currentUser
 })
 
 const mapDispatchToProps = dispatch => ({

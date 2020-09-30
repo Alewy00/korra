@@ -2,12 +2,12 @@ import React from 'react';
 import { withRouter, Redirect } from 'react-router-dom';
 import {Route, Link} from 'react-router-dom';
 
-class editQuestion extends React.Component {
+class editAnswer extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            body: this.props.question.body,
-            question: this.props.question,
+            body: this.props.answer.body,
+            answer: this.props.answer,
             show: false,
         };
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -21,31 +21,29 @@ class editQuestion extends React.Component {
 
     handleSubmit(e) { 
         e.preventDefault();
-        this.state.question.body = this.state.body
-        this.props.updateQuestion(this.state.question).then(this.setState({body: ''})) 
+        this.state.answer.body = this.state.body
+        this.props.updateAnswer(this.state.answer).then(this.setState({body: ''})) 
         this.handleCancel()
         window.location.reload();
     }
 
 
     update(field) {
-        console.log(field)
         return e => this.setState({
         [field]: e.currentTarget.value
         });
     }
     handleDelete() {
-        console.log("hit")
-        this.props.deleteQuestion(this.state.question)
-        .then(() => { this.props.history.push('/');})
+        this.props.deleteAnswer(this.state.answer)
+        window.location.reload();
       }
        
-    handleQuestion(){
-        const modal = document.getElementById("edit-q-modal");
+    handleAnswer(){
+        const modal = document.getElementById("edit-a-modal");
         modal.style.display = "block";
     }
     handleCancel(){
-        const modal = document.getElementById("edit-q-modal");
+        const modal = document.getElementById("edit-a-modal");
             modal.style.display = "none";
      }
      handleBlur(e) {
@@ -63,14 +61,14 @@ class editQuestion extends React.Component {
           <div className="edit">
             {/* <button className="edit-q-button" onClick={this.handleQuestion}>Edit Question</button> */}
           </div>
-          <div id="edit-q-modal" className="modal-main hide">
+          <div id="edit-a-modal" className="modal-edit">
           <form onSubmit={this.handleSubmit} className="edit-form-box">
           <div className="edit-question-component">
-          <div className="modal-content">
+          <div className="edit-a-modal-content">
           <button type="button" className="edit-close" onClick={this.handleCancel}>Close</button>
           <button type="button" className="edit-x" onClick={this.handleCancel}>x</button>
           <div className="grey-top">
-            <h1 id="ask-q">Edit Question</h1>
+            <h1 id="ask-q">Edit Answer</h1>
           </div>
         <div className="question-attributes">
             <textarea type="text"
@@ -81,11 +79,12 @@ class editQuestion extends React.Component {
               value={this.state.body}
               onChange={this.update('body')}
               className="body-input"
-              placeholder={this.props.question.body}>
+              placeholder={this.props.answer.body}>
+              '
               </textarea>
           <br/>
           <div className="edit-module-footer">
-            <button className="question-submit">Edit question</button>
+            <button className="question-submit">Edit answer</button>
           </div>
           {/* <input className="question-submit" type="submit" value={this.props.formType} /> */}
         </div>
@@ -95,11 +94,11 @@ class editQuestion extends React.Component {
       </form>
        </div>
        <div className="edit-dropdown">
-          <button className="drop-button" type="button" onBlur={this.handleBlur} onClick={this.handleClick} >
-              EDIT ME
+          <button className="a-drop-button" type="button" onBlur={this.handleBlur} onClick={this.handleClick} >
+              . . .
               {this.state.show ? (
                 <ul className="dropdown-list" onClick={e => e.stopPropagation()}>
-                  <li className="drop-item" onClick={this.handleQuestion}>Edit</li>
+                  <li className="drop-item" onClick={this.handleAnswer}>Edit</li>
                   <li className="drop-item" onClick={this.handleDelete}>Delete</li>
                 </ul>
               ) : null }
@@ -109,4 +108,4 @@ class editQuestion extends React.Component {
       )
      }
 }
-export default editQuestion;
+export default editAnswer;

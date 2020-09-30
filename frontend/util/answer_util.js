@@ -29,7 +29,7 @@ export const recieveAllAnswers = () => (
 )
 
 
-export const deleteAnswer = answer=> (
+export const deleteAnswer = answer => (
     $.ajax({
         url: `/api/answers/${answer.id}`,
         method: 'DELETE'

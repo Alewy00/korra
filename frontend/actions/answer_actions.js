@@ -47,8 +47,8 @@ export const updateAnswer = (answer) => dispatch => (
         .then(answer => dispatch(receiveAnswer(answer)))
 )
 
-export const deleteAnswer = answerId => dispatch => (
-    AnswerAPI.deleteAnswer(answerId)
+export const deleteAnswer = answer => dispatch => (
+    AnswerAPI.deleteAnswer(answer)
         .then(answer => dispatch(removeAnswer(answer.id)))
 )
 

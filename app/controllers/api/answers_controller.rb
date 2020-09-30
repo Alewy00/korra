@@ -42,7 +42,7 @@ class Api::AnswersController < ApplicationController
         render json: ["deleted"]
     end
 
-    def question_params
+    def answer_params
         params.require(:answer).permit(:body, :question_id)
     end
 end

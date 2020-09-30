@@ -1,5 +1,5 @@
 import React from 'react';
-
+import AnswerItem from './answer_item'
 class Answers extends React.Component {
     constructor(props) {
         super(props);
@@ -14,17 +14,24 @@ class Answers extends React.Component {
       }
 
 
-    // should return a list of answer index items
+    
     render() {
+        const currentUser = this.props.currentUser;
         const answers = Object.values(this.state.answers);
             return (
+            <div>
                 <ul className ="answer-list">
+                <div className="thin-line">
+                __________________________________________________________________________
+            </div>
                 {answers.map((answer, i) => (
                      <li key={i} className="answer-items">
-                     {answer.body}
+                         < AnswerItem answer={answer} currentUser={currentUser} alone={false} />
                      </li>
+                    
                 ))}
-          </ul>
+                </ul>
+          </div>
             )
     }
 }

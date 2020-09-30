@@ -36,3 +36,10 @@ export const updateQuestion = question => (
         }
     })
 );
+
+export const recieveAllAnswersByQuestion = questionId => (
+    $.ajax({
+        url: `/api/questions/${questionId}/answers`,
+        method: 'GET'
+    })
+)

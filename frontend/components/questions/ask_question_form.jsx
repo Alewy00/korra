@@ -19,6 +19,7 @@ class AskQuestion extends React.Component {
         e.preventDefault();
         this.props.askQuestion(this.state).then(this.setState({body: ''})) 
         this.handleCancel()
+       
     }
 
 
@@ -31,11 +32,11 @@ class AskQuestion extends React.Component {
   
 
     handleQuestion(){
-        const modal = document.getElementById("modal");
+        const modal = document.getElementById("ask-modal");
         modal.style.display = "block";
     }
     handleCancel(){
-        const modal = document.getElementById("modal");
+        const modal = document.getElementById("ask-modal");
             modal.style.display = "none";
      }
   
@@ -55,7 +56,7 @@ class AskQuestion extends React.Component {
                 </span> 
             </button>
           </div>
-          <div id="modal" className="modal-main hide">
+          <div id="ask-modal" className="modal-main hide">
           {/* <Link to="/" className="x"><button className="close-question-button">x</button></Link> */}
           <form onSubmit={this.handleSubmit} className="q-form-box">
           <div className="ask-question-component">
@@ -76,6 +77,7 @@ class AskQuestion extends React.Component {
             </div>
       <h2 id="who-asked">{currentUser.first_name} asked </h2>
             <textarea type="text"
+                id="ask-q-text"
                 cols="50"
                 rows="1"
               value={this.state.body}

@@ -2,14 +2,15 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import IndexItem from './question_index_item'
 import EditQuestion from './edit_question'
-
+import AnswerItem from '../answers/answer_item'
 class QuestionIndex extends React.Component {
  
   constructor(props){
     super(props);
     // this.handleDelete = this.handleDelete.bind(this)
     // this.editButtons = this.editButtons.bind(this)
-  }
+   
+} 
   componentDidMount(){
     this.props.recieveAllQuestions();
   }
@@ -28,6 +29,7 @@ class QuestionIndex extends React.Component {
         )
       }
     }
+ 
     
     render() {
       // const questions = this.props.recieveAllQuestions()
@@ -39,8 +41,15 @@ class QuestionIndex extends React.Component {
          <ul className ="question-list">
             {questions.map((question, i) => (
                 <li key={i} className="question-items">
-                  <IndexItem question={question} key={question.id} />
+                  {/* <h1 className="q-author">{question.author.firstname + " " + question.author.firstname }</h1> */}
+                  <IndexItem 
+                  question={question} 
+                  key={question.id} 
+                  recieveAllAnswersByQuestion={this.props.recieveAllAnswersByQuestion}
+                  currentUser={this.props.currentUser}
+                    />
                     {/* {this.editButtons(question)} */}
+                  
                 </li>
                 ))}
           </ul>

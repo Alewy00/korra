@@ -1,0 +1,35 @@
+.show-item{
+    margin: auto;
+    position: relative;
+    left: -230px;
+    top: 100px;
+    // background-color: white;
+    font-size: 23px;
+    width: 602px;
+    font-weight: bolder;
+ }
+
+ #suggest-header{
+    font-size: 17px;
+}
+.suggest-link{
+color: #195faa;
+text-decoration: none;
+list-style: none;
+font-size: 15px;
+font-weight: lighter;
+}
+
+.suggest-link:hover{
+    text-decoration: underline;
+}
+
+.suggested{
+    position: fixed;
+    top: 80px;
+    width: 400px;
+    right: 90px;
+    overflow-wrap: break-word;
+}
+
+ 
