@@ -12,8 +12,8 @@ const Greeting = ({ currentUser, logout }) => {
       <div className="MAIN">
     <div className="taskbar">
       <Link to="/" id="korra-taskbar">Korra</Link>
-      <Link to="/" id="korra-taskbar">Home</Link>
-      <Link to="answers" id="korra-taskbar">Answers</Link>
+      <Link to="/" id="home-taskbar">Home</Link>
+      <Link to="answers" id="answers-taskbar">Answers</Link>
       <button className="logout" onClick={logout}>Log Out</button>
       </div>
       </div>
