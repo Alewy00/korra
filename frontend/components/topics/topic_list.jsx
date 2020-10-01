@@ -11,7 +11,7 @@ class TopicList extends React.Component {
         <div className="topic-class">
              <ul className="topic-list">
             {TOPICS.map((topic, i) =>(
-                <li key={i}>{topic}</li>
+                <li className="topic-item" key={i}><button className="topic-button">{topic}</button></li>
             ))}                       
          </ul>
         </div>

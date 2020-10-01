@@ -39,12 +39,13 @@ class AskQuestion extends React.Component {
         const modal = document.getElementById("ask-modal");
             modal.style.display = "none";
      }
+   
   
 
     render() {
         const { currentUser } = this.props;
       return (
-         <div className="splash">
+          <div className="splash">
              <div className="ask-q">
             <button className="ask-q-button" onClick={this.handleQuestion}>
                 <span className="button-username">
@@ -55,8 +56,8 @@ class AskQuestion extends React.Component {
                 </span> 
             </button>
         </div>
-                {/* <TopicList /> */}
               <QuestionIndex />
+                <TopicList />
           <div id="ask-modal" className="modal-main hide">
           {/* <Link to="/" className="x"><button className="close-question-button">x</button></Link> */}
           <form onSubmit={this.handleSubmit} className="q-form-box">

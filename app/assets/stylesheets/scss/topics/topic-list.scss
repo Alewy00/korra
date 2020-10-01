@@ -1,0 +1,31 @@
+.topic-list{
+    position: absolute;
+    top: 70px;
+    left: 90px;
+    list-style: none;
+    color: grey;
+    width: fit-content;
+}
+.topic-item{
+   
+}
+.topic-button{
+    border: none;
+    background: none;
+    color: grey;
+    // margin: 15px;
+    width: 150px;
+    padding: 10px;
+    height: fit-content;
+    text-align: left;
+    border-radius: 6px;
+  
+}
+.topic-button:hover{
+    background-color: white;
+    
+}
+.topic-class{
+    // width: fit-content;
+    // margin-right: 0px;
+}
