@@ -10,11 +10,7 @@ export const App = () => (
       <div className="index">
             <Greetings />
       {/* <BrowserRouter> */}
-           <Switch>
-            <Route path="/questions/:id" component={showQuestion}/>
-            <Route exact path="/" component={AskQuestionFormContainer} />
-            <Route exact path="/answers" component={AnswerIndexContainer} />
-          </Switch>
+           
       {/* </BrowserRouter> */}
 
     </div>

@@ -44,9 +44,8 @@ class AskQuestion extends React.Component {
     render() {
         const { currentUser } = this.props;
       return (
-          <div>
-              <QuestionIndex />
-          <div className="ask">
+         <div className="splash">
+             <div className="ask-q">
             <button className="ask-q-button" onClick={this.handleQuestion}>
                 <span className="button-username">
                         {currentUser.first_name}
@@ -55,7 +54,9 @@ class AskQuestion extends React.Component {
                     What is your question?
                 </span> 
             </button>
-          </div>
+        </div>
+
+              <QuestionIndex />
           <div id="ask-modal" className="modal-main hide">
           {/* <Link to="/" className="x"><button className="close-question-button">x</button></Link> */}
           <form onSubmit={this.handleSubmit} className="q-form-box">
