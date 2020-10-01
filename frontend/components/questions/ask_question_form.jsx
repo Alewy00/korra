@@ -2,7 +2,7 @@ import React from 'react';
 import { withRouter, Redirect } from 'react-router-dom';
 import QuestionIndex from './question_index_container'
 import {Route, Link} from 'react-router-dom';
-
+import TopicList from '../topics/topic_list'
 class AskQuestion extends React.Component {
     constructor(props) {
         super(props);
@@ -55,7 +55,7 @@ class AskQuestion extends React.Component {
                 </span> 
             </button>
         </div>
-
+                {/* <TopicList /> */}
               <QuestionIndex />
           <div id="ask-modal" className="modal-main hide">
           {/* <Link to="/" className="x"><button className="close-question-button">x</button></Link> */}

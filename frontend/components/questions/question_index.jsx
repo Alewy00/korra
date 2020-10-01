@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import IndexItem from './question_index_item'
 import EditQuestion from './edit_question'
 import AnswerItem from '../answers/answer_item'
+import TopicList from '../topics/topic_list'
 class QuestionIndex extends React.Component {
  
   constructor(props){
@@ -41,14 +42,13 @@ class QuestionIndex extends React.Component {
          <ul className ="question-list">
             {questions.map((question, i) => (
                 <li key={i} className="question-items">
-                  {/* <h1 className="q-author">{question.author.firstname + " " + question.author.firstname }</h1> */}
                   <IndexItem 
                   question={question} 
                   key={question.id} 
                   recieveAllAnswersByQuestion={this.props.recieveAllAnswersByQuestion}
                   currentUser={this.props.currentUser}
                     />
-                    {/* {this.editButtons(question)} */}
+                   
                   
                 </li>
                 ))}

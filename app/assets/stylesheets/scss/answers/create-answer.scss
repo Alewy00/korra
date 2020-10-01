@@ -8,8 +8,9 @@
     position: relative;
     height: 200px;
     z-index: 3;
-    left: -5px;
-    top: -35px;
+    // left: -5px;
+    // top: -35px;
+    margin-left: -20px;
     width: 600px; 
     height: 350px; 
     overflow: hidden; 
@@ -19,10 +20,10 @@
 
   .answer-modal-content {
     position: relative;
-    left: 20px;
+    // left: 20px;
     top: -150px;
     background-color: #fefefe;
-    margin: 15% auto; 
+    margin: 55% auto; 
     padding: 20px;
     border: 1px solid #888;
     width: 200px; 

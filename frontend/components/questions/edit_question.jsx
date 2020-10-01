@@ -96,7 +96,7 @@ class editQuestion extends React.Component {
        </div>
        <div className="q-edit-dropdown">
           <button className="q-drop-button" type="button" onBlur={this.handleBlur} onClick={this.handleClick} >
-          <i class="fas fa-ellipsis-h"></i>
+          <i className="fas fa-ellipsis-h"></i>
               {this.state.show ? (
                 <ul className="q-dropdown-list" onClick={e => e.stopPropagation()}>
                   <li className="drop-item" onClick={this.handleQuestion}>Edit</li>
