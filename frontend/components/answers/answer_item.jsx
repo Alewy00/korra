@@ -16,8 +16,14 @@ class AnswerItem extends React.Component {
       const answer = this.props.answer;
       if(!this.props.alone){
         return(
+          <div className="answer-header">
+          <div className="a-user-icon">
+          <i id="a-user-circle" className="fas fa-user-circle"></i>
+          </div>
           <h2 id="answer-header">{answer.author.first_name + " " + answer.author.last_name }</h2>
+        </div>
         )
+
       }
     }
     aloneLine(){

@@ -22,6 +22,9 @@
     background: none;
     
 }
+.edit-close:hover{
+    background-color: lightgray;
+}
 .edit-close{
     z-index: 2;
     position: relative;
@@ -31,7 +34,7 @@
     color:grey;
     font-weight: bolder;
     border-radius: 56px;
-    width: 140px;
+    width: 100px;
     border: none;
     padding: 10px;
     text-align: center;

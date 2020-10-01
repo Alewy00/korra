@@ -16,16 +16,10 @@
     color:rgb(192, 34, 34);
     height: 15px;
 }
-#answer-header{
-    position: relative;
-    font-size: 16px;
-    // top: -50px;
-    // margin-top: 10px;
-}
 
 #answer-body{
     position: relative;
-    // top: 50px;
+    top: -30px;
     width: 550px;
     overflow-wrap: break-word;
 }
@@ -36,3 +30,17 @@
     // z-index: 99;
     padding: 10px;
 }
+#a-user-circle{
+    position: relative;
+    top: 10px;
+    left: -5px;
+    font-size: 40px;
+
+}
+    #answer-header{
+        position: relative;
+        font-size: 16px;
+        left: 45px;
+        top: -40px;
+        // margin-top: 10px;
+    }

@@ -63,6 +63,7 @@ class createAnswer extends React.Component {
           {/* <button type="button" className="close-button" onClick={this.handleCancel}>Close</button> */}
           <button type="button" className="answer-x" onClick={this.handleCancel}>x</button>
           <div className="answer-red-top">
+            <i id="create-a-user-circle" className="fas fa-user-circle"></i>
             <h2 id="who-answered">{currentUser.first_name + " " + currentUser.last_name} </h2>
           {/* </div> */}
          </div>

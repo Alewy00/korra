@@ -49,6 +49,9 @@ class QuestionIndexItem extends React.Component {
     const question = this.props.question;
     return (
       <div className="question-item">
+        <div className="user-icon">
+         <i id="user-circle" className="fas fa-user-circle"></i>
+        </div>
           <h3 id="q-author-name">{question.author.first_name + " " + question.author.last_name }</h3>
           <p className="question-index-body"><Link className ="question-link"to={`/questions/${question.id}`}>{question.body}</Link></p>
             <div className="question-answer">

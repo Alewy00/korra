@@ -112,14 +112,21 @@
 .question-answer{
     font-family: 'Roboto', sans-serif;
     position: relative;
-    // top: -10px;
+    top: 25px;
     left: 30px;
+}
+
+#user-circle{
+    position: relative;
+    top: 45px;
+    left: 30px;
+    font-size: 40px;
 }
 
 #q-author-name{
     position: relative;
     // top: -70px;
-    left: 70px;
+    left: 80px;
     font-size: 15px;
     font-family: 'Roboto', sans-serif;
     // margin: 1px;

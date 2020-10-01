@@ -8,10 +8,10 @@
     position: relative;
     height: 200px;
     z-index: 3;
-    left: -20px;
+    left: -5px;
     top: -35px;
     width: 600px; 
-    height: 400px; 
+    height: 350px; 
     overflow: hidden; 
     // background-color: rgb(0,0,0); 
     // background-color: rgba(0,0,0,0.4);
@@ -19,6 +19,7 @@
 
   .answer-modal-content {
     position: relative;
+    left: 20px;
     top: -150px;
     background-color: #fefefe;
     margin: 15% auto; 
@@ -29,7 +30,7 @@
     border-radius: 20px;
   }
   .answer-red-top{
-    width: 600px;
+    width: 550px;
     height: 80px;
     // background-color: rgb(192, 34, 34);
     background-color: lightgray;
@@ -39,7 +40,7 @@
   .answer-footer{
     position: relative;
     bottom: 17px;
-    width: 600px;
+    width: 550px;
     height: 50px;
     // background-color: rgb(192, 34, 34);
     background-color: lightgray;
@@ -56,7 +57,7 @@
     font-size: 13px;
     padding: 10px;
     // min-height: 38px;
-    width: 600px;
+    width: 550px;
     height: 200px;
     box-sizing: border-box;
     // overflow: hidden;
@@ -66,12 +67,19 @@
     border-bottom-style: groove;
   }
 
+  #create-a-user-circle{
+    position: relative;
+    top: 15px;
+    left: 20px;
+    font-size: 40px;
+
+}
   #who-answered{
     position: relative;
-    left: 40px;
-    top: 20px;
+    left: 70px;
+    top: -30px;
       color: white;
-      font-size: 18px;
+      font-size: 15px;
       font-weight: lighter;
       border: none;
   }
@@ -109,8 +117,8 @@
   .answer-x{
     color: white;
     position: relative;
-    left: 560px;
-    top: 60px;
+    left: 500px;
+    top: 50px;
     font-size: 24px;
     // font-weight: bold;
     padding: 10px;
