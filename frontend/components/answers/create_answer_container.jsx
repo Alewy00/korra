@@ -13,7 +13,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = dispatch => ({
     writeAnswer: answer => dispatch(writeAnswer(answer)), 
-    // updateAnswer: answer => dispatch(updateAnswer(answer))
+    
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(createAnswer);

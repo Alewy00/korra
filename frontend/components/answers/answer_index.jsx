@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import AnswerIndexItem from './answer_index_item'
+
 class AnswerIndex extends React.Component {
  
   constructor(props){
@@ -18,9 +19,9 @@ class AnswerIndex extends React.Component {
       const questions = Object.values(this.props.questions);
       return (
       <div className="answer-index">
-         <ul className ="question-list">
+         <ul className ="answer-index-list">
             {questions.map((question, i) => (
-                <li key={i} className="question-items">
+                <li key={i} className="answer-index-items">
                   <AnswerIndexItem 
                   question={question} 
                   key={question.id} 

@@ -14,9 +14,7 @@ class AnswerItem extends React.Component {
   }
     alone(){
       const answer = this.props.answer;
-      if(this.props.alone){
-        return <h2 id="index-header">{answer.author.first_name + " " + answer.author.last_name }</h2>
-      }else{
+      if(!this.props.alone){
         return(
           <h2 id="answer-header">{answer.author.first_name + " " + answer.author.last_name }</h2>
         )

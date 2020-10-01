@@ -7,13 +7,19 @@ class createAnswer extends React.Component {
         super(props);
         this.state = {
             body: '',
-            question_id: this.props.questionId 
+            question_id: this.props.questionId,
+            modalKlass: "answer-modal" 
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         // this.handleCancel = this.handleSubmit.bind(this);
        
      }
-
+  
+     componentDidMount(){
+      if(this.props.index){
+        this.setState({Klass: 'modal-index'})
+      }
+   }
 
     handleSubmit(e) {        
         e.preventDefault();
@@ -49,7 +55,7 @@ class createAnswer extends React.Component {
             <button className="answer-button" onClick={this.handleAnswer}>
               Answer
             </button>
-          <div id="answer-modal" className="answer-modal hide">
+          <div id="answer-modal" className={this.state.modalKlass}>
           {/* <Link to="/" className="x"><button className="close-question-button">x</button></Link> */}
           <form onSubmit={this.handleSubmit} className="a-form-box">
           <div className="answer-question-component">

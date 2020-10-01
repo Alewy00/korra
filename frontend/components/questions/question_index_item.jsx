@@ -49,7 +49,8 @@ class QuestionIndexItem extends React.Component {
     const question = this.props.question;
     return (
       <div className="question-item">
-          <Link className ="question-link"to={`/questions/${question.id}`}>{question.body}</Link>
+          <h3 id="q-author-name">{question.author.first_name + " " + question.author.last_name }</h3>
+          <p className="question-index-body"><Link className ="question-link"to={`/questions/${question.id}`}>{question.body}</Link></p>
             <div className="question-answer">
               {this.answer()}
             </div>
