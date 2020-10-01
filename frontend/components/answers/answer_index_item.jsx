@@ -45,7 +45,7 @@ class AnswerIndexItem extends React.Component {
           <p className="question-index-link-p"><Link className ="question-index-link"to={`/questions/${question.id}`}>{question.body}</Link></p>
               {this.answer()}
               {this.author()}
-          <CreateAnswer questionId={question.id} index={true} />
+          {/* <CreateAnswer questionId={question.id} index={true} /> */}
           </div>
       </div>
     );
