@@ -6,7 +6,7 @@
     background-color: white;
     width: 600px;
     height: fit-content;
-    padding: 15px;
+    // padding: 15px;
 
 }
 .answer-index-list{
@@ -18,7 +18,7 @@
 .answer-index-items{
     position: relative;
     left: -40px;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid rgb(235, 233, 233);;
     width: 600px;
     // height: fit-content;
    
@@ -76,4 +76,32 @@
 .question-index-link:hover{
     text-decoration: underline;
 
+}
+#a-index-top-header{
+    position: relative;
+    left: 30px;
+    top: 10px;
+    color: grey;
+    font-weight: lighter;
+}
+.a-index-top{
+    position: relative;
+    top: -20px;
+    width: 600px;
+    height: 40px;
+    background-color: white;
+    border-bottom: 1px solid rgb(235, 233, 233);;
+    border-top-left-radius: 10px ;
+    border-top-right-radius: 10px ;
+}
+
+.a-index-bottom{
+    position: relative;
+    bottom: -20px;
+    width: 600px;
+    height: 40px;
+    background-color: white;
+    border-top: 1px solid rgb(235, 233, 233);;
+    border-bottom-left-radius: 10px ;
+    border-bottom-right-radius: 10px ;
 }

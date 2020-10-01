@@ -19,6 +19,9 @@ class AnswerIndex extends React.Component {
       const questions = Object.values(this.props.questions);
       return (
       <div className="answer-index">
+        <div className="a-index-top">
+            <h4 id="a-index-top-header">Answers for you</h4>
+        </div>
          <ul className ="answer-index-list">
             {questions.map((question, i) => (
                 <li key={i} className="answer-index-items">
@@ -31,6 +34,9 @@ class AnswerIndex extends React.Component {
                 </li>
                 ))}
           </ul>
+          <div className="a-index-bottom">
+
+        </div>
           </div> 
     )          
   }
