@@ -1,14 +1,17 @@
 .a-drop-button{
     position: relative;
     width: 40px;
-    top: 73px;
+    top: 100px;
     left: 100px;
     border: none;
     background-color: #ebe9e9 ;
-    padding: 2px;
-    // z-index: 1;
+    padding: 5px;
+    font-size: 15px;
+    z-index: 99;
     
 }
+
+
 
 .modal-edit {
     display: none; 

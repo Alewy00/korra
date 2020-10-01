@@ -84,14 +84,17 @@
       border: none;
   }
   .answer-button{
-    background-color:blue;
-    color: white;
+    // background-color:blue;
+    position: relative;
+    top: 10px;
+    color: blue;
     border-radius: 66px;
     border: none;
     width: 60px;
     height:20px;
     text-align: center;
     text-decoration: none;
+    font-size: 20px;
   }
 
   .answer-submit{

@@ -100,7 +100,7 @@ class editAnswer extends React.Component {
        </div>
        <div className="edit-dropdown">
           <button className={this.state.Klass} type="button" onBlur={this.handleBlur} onClick={this.handleClick} >
-              . . .
+          <i class="fas fa-ellipsis-h"></i>
               {this.state.show ? (
                 <ul className="dropdown-list" onClick={e => e.stopPropagation()}>
                   <li className="drop-item" onClick={this.handleAnswer}>Edit</li>

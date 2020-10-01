@@ -53,7 +53,7 @@ class createAnswer extends React.Component {
       return (
           <div className="answer">
             <button className="answer-button" onClick={this.handleAnswer}>
-              Answer
+               <i className="far fa-edit"></i>
             </button>
           <div id="answer-modal" className={this.state.modalKlass}>
           {/* <Link to="/" className="x"><button className="close-question-button">x</button></Link> */}
