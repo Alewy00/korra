@@ -8,10 +8,12 @@
     height: fit-content;
     // padding: 15px;
 
+
 }
 .answer-index-list{
     position: relative;
     list-style: none;
+    font-family: 'Roboto', sans-serif;
     
 }
 
@@ -41,6 +43,7 @@
     color: grey;
     font-size: 15px;
     text-decoration: none;
+    font-family: 'Roboto', sans-serif;
 }
 
 .number-link:hover{
@@ -67,6 +70,7 @@
 .question-index-link{
     // position: relative;
     // top: 10px;
+    font-family: 'Roboto', sans-serif;
     text-decoration: none;
     color: black;
     font-size: 17px;
@@ -78,11 +82,12 @@
 
 }
 #a-index-top-header{
+    font-family: 'Roboto', sans-serif;
     position: relative;
     left: 30px;
     top: 10px;
     color: grey;
-    font-weight: lighter;
+    // font-weight: lighter;
 }
 .a-index-top{
     position: relative;

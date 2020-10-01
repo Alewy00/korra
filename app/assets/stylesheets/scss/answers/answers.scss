@@ -1,6 +1,9 @@
 
-
+.answers{
+    height: fit-content;
+}
 .answer-list{
+    font-family: 'Roboto', sans-serif;
     position: relative;
     top: 90px;
     left: 55px;
@@ -8,6 +11,7 @@
 
 }
 .thin-line{
+    position: relative;
     width: 100%;
     color:rgb(192, 34, 34);
     height: 15px;

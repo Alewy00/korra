@@ -10,6 +10,7 @@
 .splash{
 //     position: relative;
     margin: auto;
+    font-family: 'Roboto', sans-serif;
 //     top: -150px;
 }
 
@@ -109,6 +110,7 @@
     text-decoration: underline;
 }
 .question-answer{
+    font-family: 'Roboto', sans-serif;
     position: relative;
     // top: -10px;
     left: 30px;
@@ -119,10 +121,12 @@
     // top: -70px;
     left: 70px;
     font-size: 15px;
+    font-family: 'Roboto', sans-serif;
     // margin: 1px;
 }
 
 .no-answer{
+    font-family: 'Roboto', sans-serif;
     position: relative;
     font-size: 17px;
     top: 15px;
