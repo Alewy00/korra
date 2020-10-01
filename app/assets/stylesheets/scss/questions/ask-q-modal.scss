@@ -15,8 +15,10 @@
   }
 
   .modal-content {
-    position: relative;
-    top: -150px;
+    position: fixed;
+    // margin: auto;
+    top: -100px;
+    right: 350px;
     background-color: #fefefe;
     margin: 15% auto; 
     padding: 20px;

@@ -17,7 +17,7 @@
     left: -65px;
     top: -200px;
     width: 200%; 
-    height: 200%; 
+    height: 300%; 
     overflow: auto; 
     background-color: rgb(0,0,0); 
     background-color: rgba(0,0,0,0.4);
@@ -25,10 +25,10 @@
   }
 
 .edit-a-modal-content{
-    position: relative;
+    position: fixed;
     // margin: auto;
     top: -100px;
-    right: 650px;
+    right: 350px;
     background-color: #fefefe;
     margin: 15% auto; 
     padding: 20px;
