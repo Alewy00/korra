@@ -11,25 +11,24 @@ https://korra09.herokuapp.com/#/
 
 * Technoligies used to create Korra
 
-• React.js
+* React.js
 
-• SASS
+* SASS
 
-• PostgreSQL
+* PostgreSQL
 
-• Ruby on Rails
+* Ruby on Rails
 
-* Configuration
+This projects uses Ruby on Rails in the backend to create intances of
 
-* Database creation
+*Users 
 
-* Database initialization
+* Login-Sessions
 
-* How to run the test suite
+* Questions
 
-* Services (job queues, cache servers, search engines, etc.)
+* Answers
 
-* Deployment instructions
+The data for each of these is stored by PostgesSQL in a table format
 
-* ...
 # korra
