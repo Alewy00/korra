@@ -44,14 +44,14 @@ In an effort to keep my code DRY, I passed the Components customized props to sp
 One specific intance of this was specifying whether a Answer was _alone_ ( Meaning it was rendering on the splash page)
 or if it was part of a greater list of Answers ( On the Question_show page)
 
-
+```javascript
 ```return(
-              <AnswerItem 
-              answer={answers[0]}  
-              currentUser={this.props.currentUser}
-              alone={true}
-               />
-      )```
+           <AnswerItem 
+           answer={answers[0]}  
+           currentUser={this.props.currentUser}
+           alone={true}
+            >
+ )```
 
 
 
