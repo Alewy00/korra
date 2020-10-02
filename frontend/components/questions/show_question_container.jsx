@@ -4,6 +4,7 @@ import showQuestion from "./show_question";
 import { recieveQuestion } from "../../actions/question_actions";
 import { deleteQuestion } from "../../actions/question_actions";
 import {Link} from 'react-router-dom';
+import { withRouter } from 'react-router-dom'
 
 const mapStateToProps = (state, { match }) => ({
     questionId: parseInt(match.params.id),
@@ -16,4 +17,4 @@ const mapDispatchToProps = dispatch => ({
     deleteQuestion: question => dispatch(deleteQuestion(question))
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(showQuestion);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(showQuestion));

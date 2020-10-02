@@ -5,7 +5,7 @@ import EditAnswer from './edit_answer_container'
 class AnswerItem extends React.Component {
   
   editButtons(answer) {
-    console.log(answer)
+    // console.log(answer)
     if (answer.author.id === this.props.currentUser.id) {
       return (
             <EditAnswer answer={answer} alone={this.props.alone} />

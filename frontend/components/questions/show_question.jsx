@@ -27,7 +27,7 @@ class QuestionShow extends React.Component {
 
       editButtons(question) {
         if (question.author_id === this.props.currentUser.id) {
-          console.log("hit edit question")
+          // console.log("hit edit question")
           return (
             <div className="edit-buttons">
             {/* <div > */}
@@ -40,6 +40,10 @@ class QuestionShow extends React.Component {
             )
           }
         }
+
+        // link(){
+        //   window.location.href.reload()
+        // }
       
       
      
@@ -55,7 +59,7 @@ class QuestionShow extends React.Component {
 //   const question = this.props.recieveQuestion(this.props.questionId )
         if(!isEmpty(this.state.question)){
         return(
-        <div>
+        <div> 
         <div className="q-show">
             <div className="show-item">
             {this.state.question.body}
@@ -74,9 +78,10 @@ class QuestionShow extends React.Component {
             <div className="suggested">
               <h1 id="suggest-header">Suggested Questions</h1>
               <div className="thin-line">________________________________________</div>
-               <h2><Link className ="suggest-link" to="/questions/140">Do you think my wife will care if I murdered many children in order to save her life?</Link></h2>
-               <h2><Link className ="suggest-link"to="/questions/141">..................</Link></h2>
-               <h2><Link className ="suggest-link"to="/questions/142">Do you think I may have dual-personality disorder? No of course you don't, the precious told us so! Oh good I was worried for a second</Link></h2>
+              {/* <h2 className ="suggest-link" onClick={this.link(194)}>What are the most unknown facts on the Second World War?</h2> */}
+               <h2><Link className ="suggest-link" to="/questions/194">What are the most unknown facts on the Second World War?</Link></h2>
+               <h2><Link className ="suggest-link" to="/questions/195">What are some crazy things about the human body?</Link></h2>
+               <h2><Link className ="suggest-link" to="/questions/196">What are some mind-blowing facts about food?</Link></h2>
             </div>
           </div>
         )

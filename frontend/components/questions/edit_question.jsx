@@ -29,7 +29,7 @@ class editQuestion extends React.Component {
 
 
     update(field) {
-        console.log(field)
+        // console.log(field)
         return e => this.setState({
         [field]: e.currentTarget.value
         });

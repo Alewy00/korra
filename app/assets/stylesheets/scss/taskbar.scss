@@ -31,21 +31,41 @@
     // top: -5px;
     left: 200px;
     // font-size: 30px;
-    font-size: 230%;
+    font-size: 200%;
+    // font-weight: 10;
     color:rgb(192, 34, 34);
-    font-family: 'Lobster', cursive;
+    // font-family: 'Lobster', cursive;
+    font-family: 'Roboto', sans-serif;
     padding: 5px;
     // background-color: white;
 }
+#home-text{
+    position: relative;
+    bottom: 6px;
+    left: 3.5px;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+ }
+
+ #answers-text{
+    position: relative;
+    bottom: 6px;
+    left: 3.5px;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+ }
 #answers-taskbar{
     text-decoration: none;
     position: relative;
     // top: -5px;
-    left: 300px;
+    left: 260px;
     // font-size: 30px;
-    font-size: 230%;
+    font-size: 180%;
     color:rgb(192, 34, 34);
-    font-family: 'Lobster', cursive;
+    // font-family: 'Lobster', cursive;
+    font-family: 'Roboto', sans-serif;
     padding: 5px;
     // background-color: white;
 }

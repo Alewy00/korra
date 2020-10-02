@@ -19,7 +19,7 @@ class QuestionIndexItem extends React.Component {
 } 
   answer(){
     
-    console.log(this.state.answers[0])
+    // console.log(this.state.answers[0])
     if(this.state.answers.length > 0){
       return(
               <AnswerItem 

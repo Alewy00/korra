@@ -17,8 +17,16 @@ const Greeting = ({ currentUser, logout }) => {
       <div className="MAIN">
           <div className="taskbar">
                 <Link to="/" id="korra-taskbar">Korra</Link>
-                <Link to="/" id="home-taskbar">Home</Link>
-                <Link to="answers" id="answers-taskbar">Answers</Link>
+                <Link to="/" id="home-taskbar"><i className="fas fa-home">
+                  <span id="home-text">
+                    Home
+                  </span>
+                  </i></Link>
+                <Link to="answers" id="answers-taskbar"><i className="far fa-edit">
+                <span id="answers-text">
+                  Answer
+                  </span>
+                  </i></Link>
                 <button className="logout" onClick={logout}>Log Out</button>
            </div>
         <Switch>
