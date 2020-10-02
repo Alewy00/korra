@@ -29,7 +29,7 @@ https://korra09.herokuapp.com/#/
 
 * Answers
 
-#### How the different technoligies interact with eachother
+### How the different technoligies interact with eachother
 
 * The data for each of these is stored by **PostgesSQL** in a table format
 * These tables are accessed by the frontend using  the **JavaScript AJAX** library, and _Thunk_ middleware.
