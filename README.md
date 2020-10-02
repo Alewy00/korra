@@ -29,11 +29,11 @@ https://korra09.herokuapp.com/#/
 
 * Answers
 
-The data for each of these is stored by **PostgesSQL** in a table format
-These tables are accessed by the frontend using  the **JavaScript AJAX** library, and _Thunk_ middleware.
-_Thunk_ sends the data returned by the _AJAX request_ to **React.js** 
-The App is a _single-page-App_ using **React.js** to rerender on _state changes_ without having to refresh the entire page
-Finally, **SASS** is used to correctly style the frontend to look as simliar to the app Quora https://www.quora.com/
+* The data for each of these is stored by **PostgesSQL** in a table format
+* These tables are accessed by the frontend using  the **JavaScript AJAX** library, and _Thunk_ middleware.
+* _Thunk_ sends the data returned by the _AJAX request_ to **React.js** 
+* The App is a _single-page-App_ using **React.js** to rerender on _state changes_ without having to refresh the entire page
+* Finally, **SASS** is used to correctly style the frontend to look as simliar to the app Quora https://www.quora.com/
 
 ## Interesting Challenges faced when implementing features
 
