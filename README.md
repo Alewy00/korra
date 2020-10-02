@@ -6,7 +6,7 @@ Try it out!
 
 https://korra09.herokuapp.com/#/
 
-* #How it works
+# How it works
 
 * Technoligies used to create Korra
 
@@ -18,7 +18,7 @@ https://korra09.herokuapp.com/#/
 
 * Ruby on Rails
 
-###This projects uses Ruby on Rails in the backend to create intances of
+### This projects uses Ruby on Rails in the backend to create intances of
 
 * Users 
 
