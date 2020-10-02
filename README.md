@@ -1,13 +1,23 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ Korra is an project where a user can ask questions about anything they might be curious about, and other users
+ can answer this question to the best of their abilities. It's a great way to learn new things and spread your own vast knowledge to others!
 
-Things you may want to cover:
+Try it out! 
 
-* Ruby version
+https://korra09.herokuapp.com/#/
 
-* System dependencies
+* How it works
+
+* Technoligies used to create Korra
+
+• React.js
+
+• SASS
+
+• PostgreSQL
+
+• Ruby on Rails
 
 * Configuration
 
