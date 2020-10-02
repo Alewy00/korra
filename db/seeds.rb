@@ -19,7 +19,7 @@ questionFirst = Question.create({body: "What are the most unknown facts on the S
 question1 = Question.create({body: "What are some crazy things about the human body?", author_id: user3.id })
 question2 = Question.create({body: "What are some mind-blowing facts about food? ", author_id: user2.id} )
 question3 = Question.create({body: "What are some random facts?", author_id: user4.id })
-question3 = Question.create({body: "Answer me (if you dare...)", author_id: user6.id })
+question4 = Question.create({body: "Answer me (if you dare...)", author_id: user6.id })
 answerTest = Answer.create(
 {body: "To start you can click the Question!", author_id: user3.id, question_id: questionTest.id })
 answerTest = Answer.create(
@@ -50,7 +50,8 @@ author_id: user3.id, question_id: question2.id })
 answer2 = Answer.create({body: "OOOOOOOOOOOOHHHHHH YES! MY SPECIALTY!
 1) In England, if you reach your 100th birthday or 60th anniversary, the Queen herself will send you a card of congratulations.
 2) In 18th-century England, suicide was illegal. The punishment for attempted suicide was… death.
-3) The wolverine frog is a frog so aggressive it will break its own bones and attack people with the pieces that stick out of its skin like freaking claws.", author_id: user5.id, question_id: question3.id })
+3) The wolverine frog is a frog so aggressive it will break its own bones and attack people with the pieces that stick out of its skin like freaking claws.", 
+author_id: user5.id, question_id: question3.id })
 answer3 = Answer.create({body: "
 1) Coffee-drinkers are less likely to commit suicide than non-coffee-drinkers.
 
@@ -66,7 +67,8 @@ answer3 = Answer.create({body: "
 
 7) If a cockroach touches a human, it runs off and hides to clean itself.
 
-8) 90% of all people admit to typing things into Google to see if they spelled them correctly.", author_id: user5.id, question_id: question3.id })
+8) 90% of all people admit to typing things into Google to see if they spelled them correctly.",
+ author_id: user5.id, question_id: question3.id })
 
 answer4 = Answer.create({body: "Women’s hearts are smaller than men’s, therefore beat faster.
 2) The “B.O” smell isn’t actually caused by sweat. It’s caused when the bacteria feeds on the sweat.
