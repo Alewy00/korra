@@ -45,13 +45,14 @@ One specific intance of this was specifying whether a Answer was _alone_ ( Meani
 or if it was part of a greater list of Answers ( On the Question_show page)
 
 ```javascript
-```return(
+return(
            <AnswerItem 
            answer={answers[0]}  
            currentUser={this.props.currentUser}
            alone={true}
             >
- )```
+ )
+ ```
 
 
 
