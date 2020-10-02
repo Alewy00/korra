@@ -1,13 +1,12 @@
 # README
-
  Korra is an project where a user can ask questions about anything they might be curious about, and other users
- can answer this question to the best of their abilities. It's a great way to learn new things and spread your own vast knowledge to others!
+can answer this question to the best of their abilities. It's a great way to learn new things and spread your own vast knowledge to others!
 
 Try it out! 
 
 https://korra09.herokuapp.com/#/
 
-* How it works
+* #How it works
 
 * Technoligies used to create Korra
 
@@ -19,9 +18,9 @@ https://korra09.herokuapp.com/#/
 
 * Ruby on Rails
 
-This projects uses Ruby on Rails in the backend to create intances of
+###This projects uses Ruby on Rails in the backend to create intances of
 
-*Users 
+* Users 
 
 * Login-Sessions
 
