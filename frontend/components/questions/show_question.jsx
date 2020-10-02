@@ -79,9 +79,9 @@ class QuestionShow extends React.Component {
               <h1 id="suggest-header">Suggested Questions</h1>
               <div className="thin-line">________________________________________</div>
               {/* <h2 className ="suggest-link" onClick={this.link(194)}>What are the most unknown facts on the Second World War?</h2> */}
-               <h2><Link className ="suggest-link" to="/questions/50">What are the most unknown facts on the Second World War?</Link></h2>
-               <h2><Link className ="suggest-link" to="/questions/51">What are some crazy things about the human body?</Link></h2>
-               <h2><Link className ="suggest-link" to="/questions/196">What are some mind-blowing facts about food?</Link></h2>
+               <h2><Link className ="suggest-link" to="/questions/74">What are the most unknown facts on the Second World War?</Link></h2>
+               <h2><Link className ="suggest-link" to="/questions/75">What are some crazy things about the human body?</Link></h2>
+               <h2><Link className ="suggest-link" to="/questions/76">What are some mind-blowing facts about food?</Link></h2>
             </div>
           </div>
         )
