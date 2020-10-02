@@ -44,6 +44,7 @@ In an effort to keep my code DRY, I passed the Components customized props to sp
 One specific intance of this was specifying whether a Answer was _alone_ ( Meaning it was rendering on the splash page)
 or if it was part of a greater list of Answers ( On the Question_show page)
 
+#### In Question_index
 ```javascript
 return(
            <AnswerItem 
@@ -53,6 +54,15 @@ return(
             >
  )
  ```
+ #### In Question_show_page
+ ```javascript
+ {answers.map((answer, i) => (
+        <li key={i} className="answer-items">
+                < AnswerItem answer={answer} currentUser={currentUser} alone={false} />
+       </li>
+                    
+ ))}
+```
 
 
 
