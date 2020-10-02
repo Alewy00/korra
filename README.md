@@ -89,6 +89,14 @@ alone(){
       }
     }
  ```
+ 
+ ## Future Plans and Directions
+  
+ * Implement a page that will render Questions by _Topic_
+ 
+ * Implement Upvoting Answers
+ 
+ * Implement comments on Answers
 
 
 
