@@ -59,13 +59,11 @@ class createAnswer extends React.Component {
           {/* <Link to="/" className="x"><button className="close-question-button">x</button></Link> */}
           <form onSubmit={this.handleSubmit} className="a-form-box">
           <div className="answer-question-component">
-          {/* <div className="answer-modal-content"> */}
-          {/* <button type="button" className="close-button" onClick={this.handleCancel}>Close</button> */}
-          <button type="button" className="answer-x" onClick={this.handleCancel}>x</button>
+            <button type="button" className="answer-x" onClick={this.handleCancel}>x</button>
           <div className="answer-red-top">
             <i id="create-a-user-circle" className="fas fa-user-circle"></i>
             <h2 id="who-answered">{currentUser.first_name + " " + currentUser.last_name} </h2>
-          {/* </div> */}
+         
          </div>
         <div className="answer-box">
             <textarea type="text"
@@ -81,9 +79,6 @@ class createAnswer extends React.Component {
                    <button className="answer-submit">Submit</button>
               </div>
           <br/>
-         
-       
-          {/* <input className="question-submit" type="submit" value={this.props.formType} /> */}
         </div>
             </div>  
       </form>
@@ -91,7 +86,7 @@ class createAnswer extends React.Component {
        </div>
       )
      }
-}
-       
-     
+}    
+
+
 export default createAnswer;

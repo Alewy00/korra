@@ -9,11 +9,7 @@ import { BrowserRouter, Route, Link } from 'react-router-dom';
 export const App = () => (  
       <div className="index">
             <Greetings />
-      {/* <BrowserRouter> */}
-           
-      {/* </BrowserRouter> */}
-
-    </div>
+      </div>
    
 
 );

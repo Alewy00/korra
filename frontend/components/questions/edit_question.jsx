@@ -35,7 +35,6 @@ class editQuestion extends React.Component {
         });
     }
     handleDelete() {
-        console.log("hit")
         this.props.deleteQuestion(this.state.question)
         .then(() => { this.props.history.push('/');})
       }

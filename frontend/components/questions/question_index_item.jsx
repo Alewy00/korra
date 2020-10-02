@@ -18,12 +18,11 @@ class QuestionIndexItem extends React.Component {
     
 } 
   answer(){
-    
-    // console.log(this.state.answers[0])
-    if(this.state.answers.length > 0){
+    const answers = this.state.answers
+    if(answers.length > 0){
       return(
               <AnswerItem 
-              answer={this.state.answers[0]}  
+              answer={answers[0]}  
               currentUser={this.props.currentUser}
               alone={true}
                />
@@ -32,7 +31,8 @@ class QuestionIndexItem extends React.Component {
   }
 
     author(){
-      if(!this.state.answers.length > 0){
+      const numAnswers = this.state.answers.length
+      if(!numAnswers > 0){
       return(
         <div>
         <div className="no-answer">
@@ -43,8 +43,6 @@ class QuestionIndexItem extends React.Component {
     }
     
   }
-    
-
   render() {
     const question = this.props.question;
     return (

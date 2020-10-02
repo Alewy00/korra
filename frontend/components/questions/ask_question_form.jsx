@@ -10,10 +10,8 @@ class AskQuestion extends React.Component {
             body: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
-        // this.handleCancel = this.handleSubmit.bind(this);
        
      }
-
 
     handleSubmit(e) {        
         e.preventDefault();
@@ -22,7 +20,6 @@ class AskQuestion extends React.Component {
        
     }
 
-
     update(field) {
         return e => this.setState({
         [field]: e.currentTarget.value
@@ -30,7 +27,6 @@ class AskQuestion extends React.Component {
     }
        
   
-
     handleQuestion(){
         const modal = document.getElementById("ask-modal");
         modal.style.display = "block";
@@ -41,7 +37,6 @@ class AskQuestion extends React.Component {
      }
    
   
-
     render() {
         const { currentUser } = this.props;
       return (
