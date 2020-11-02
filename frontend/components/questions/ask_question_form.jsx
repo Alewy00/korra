@@ -2,7 +2,7 @@ import React from 'react';
 import { withRouter, Redirect } from 'react-router-dom';
 import QuestionIndex from './question_index_container'
 import {Route, Link} from 'react-router-dom';
-import TopicList from '../topics/topic_list'
+import TopicList from '../topics/topic_list_container'
 class AskQuestion extends React.Component {
     constructor(props) {
         super(props);

@@ -44,7 +44,7 @@ export const recieveAnswer = answerId => dispatch => (
 
 export const updateAnswer = (answer) => dispatch => (
     AnswerAPI.updateAnswer(answer)
-        .then(answer => dispatch(receiveAnswer(answer)))
+        .then(answer => dispatch(showAnswer(answer)))
 )
 
 export const deleteAnswer = answer => dispatch => (

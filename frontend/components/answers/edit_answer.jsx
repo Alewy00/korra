@@ -31,7 +31,7 @@ class editAnswer extends React.Component {
         this.state.answer.body = this.state.body
         this.props.updateAnswer(this.state.answer).then(this.setState({body: ''})) 
         this.handleCancel()
-        window.location.reload();
+        // window.location.reload();
     }
 
 

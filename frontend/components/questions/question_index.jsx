@@ -8,8 +8,7 @@ class QuestionIndex extends React.Component {
  
   constructor(props){
     super(props);
-    // this.handleDelete = this.handleDelete.bind(this)
-    // this.editButtons = this.editButtons.bind(this)
+ 
    
 } 
   componentDidMount(){

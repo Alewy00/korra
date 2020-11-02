@@ -7,6 +7,7 @@ class editQuestion extends React.Component {
         super(props);
         this.state = {
             body: this.props.question.body,
+            topic_id: this.props.question.topic_id,
             question: this.props.question,
             show: false,
         };
@@ -18,13 +19,18 @@ class editQuestion extends React.Component {
        
      }
 
+     componentDidMount(){
+      this.props.recieveTopics()
+  }
+
 
     handleSubmit(e) { 
         e.preventDefault();
         this.state.question.body = this.state.body
+        this.state.question.topic_id = this.state.topic_id
         this.props.updateQuestion(this.state.question).then(this.setState({body: ''})) 
         this.handleCancel()
-        window.location.reload();
+        // window.location.reload();
     }
 
 
@@ -43,6 +49,7 @@ class editQuestion extends React.Component {
         const modal = document.getElementById("edit-q-modal");
         modal.style.display = "block";
     }
+
     handleCancel(){
         const modal = document.getElementById("edit-q-modal");
             modal.style.display = "none";
@@ -56,6 +63,7 @@ class editQuestion extends React.Component {
   
 
     render() {
+     const topics = Object.values(this.props.topics);
         const { currentUser } = this.props;
       return (
           <div>
@@ -82,6 +90,14 @@ class editQuestion extends React.Component {
               className="body-input"
               placeholder={this.props.question.body}>
               </textarea>
+            <br/>
+          <select value={this.state.topic_id} onChange={this.update("topic_id")}>
+          <option defaultValue={null}>Topic</option>
+            {topics.map((topic, i) =>(
+              <option  key={i} value={topic.id}>{topic.title}</option>
+            ))} 
+          </select>
+    
           <br/>
           <div className="edit-module-footer">
             <button className="question-submit">Edit question</button>
