@@ -70,7 +70,7 @@ class editAnswer extends React.Component {
           <form onSubmit={this.handleSubmit} className="edit-form-box">
           <div className="edit-question-component">
           <div className="edit-a-modal-content">
-          <button type="button" className="edit-close" onClick={this.handleCancel}>Close</button>
+          <button type="button" className="edit-a-close" onClick={this.handleCancel}>Close</button>
           <button type="button" className="edit-x" onClick={this.handleCancel}>x</button>
           <div className="grey-top">
             <h1 id="ask-q">Edit Answer</h1>
