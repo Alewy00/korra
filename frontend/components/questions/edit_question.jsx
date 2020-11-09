@@ -76,7 +76,7 @@ class editQuestion extends React.Component {
           <div className="modal-content">
           <button type="button" className="edit-close" onClick={this.handleCancel}>Close</button>
           <button type="button" className="edit-x" onClick={this.handleCancel}>x</button>
-          <div className="grey-top">
+          <div className="edit-grey-top">
             <h1 id="ask-q">Edit Question</h1>
           </div>
         <div className="question-attributes">

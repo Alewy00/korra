@@ -8,6 +8,7 @@
     width: 602px;
     font-weight: bolder;
     font-family: 'Roboto', sans-serif;
+    overflow-wrap: break-word;
  }
 
  #suggest-header{
@@ -33,6 +34,12 @@ font-weight: lighter;
     width: 400px;
     right: 90px;
     overflow-wrap: break-word;
+}
+
+.q-edit-dropdown{
+    position: relative;
+    top: 42px;
+    left: 490px;
 }
 
  

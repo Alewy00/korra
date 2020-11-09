@@ -83,6 +83,7 @@ class QuestionShow extends React.Component {
             <div className="show-item">
             {this.state.question.body}
               <div className="answer-q">
+                    {this.editButtons(this.state.question)}
                     < CreateAnswer questionId={this.state.question.id} />
               </div>
             </div>
@@ -92,7 +93,6 @@ class QuestionShow extends React.Component {
             {/* <div className="edit-form"> */}
                 {/* <EditQuestion question={this.state.question} key={this.state.question.id}/> */}
             {/* </div> */}
-            {this.editButtons(this.state.question)}
         </div>
             <div className="suggested">
               <h1 id="suggest-header">Suggested Questions</h1>

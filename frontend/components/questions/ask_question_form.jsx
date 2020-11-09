@@ -45,6 +45,7 @@ class AskQuestion extends React.Component {
              <div className="ask-q">
             <button className="ask-q-button" onClick={this.handleQuestion}>
                 <span className="button-username">
+                    
                         {currentUser.first_name}
                 </span>
                 <span className="inner-ask-button">
@@ -73,7 +74,10 @@ class AskQuestion extends React.Component {
                     <li>  Double-check grammar and spelling</li>
                 </ul>
             </div>
-      <h2 id="who-asked">{currentUser.first_name} asked </h2>
+            <div className="ask-q-circle">
+        <i id="user-circle" className="fas fa-user-circle"></i>
+        <h2 id="who-asked">{currentUser.first_name} asked </h2>
+      </div>
             <textarea type="text"
                 id="ask-q-text"
                 cols="50"

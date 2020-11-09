@@ -65,10 +65,16 @@
     color: rgb(36, 36, 243);
     font-weight: lighter;
   }
+
+  .ask-q-circle{
+    position: relative;
+    right: 20px;
+    top: -20px;
+  }
   #who-asked{
     position: relative;
-    left: 15px;
-    top: -10px;
+    left: 80px;
+    // top: 10px;
     font-size: 16px;
     color: #939598;
   }
@@ -80,7 +86,7 @@
     min-height: 38px;
     width: 550px;
     box-sizing: border-box;
-    // overflow: hidden;
+    overflow: auto;
     border-top-style: hidden;
     border-right-style: hidden;
     border-left-style: hidden;
@@ -97,7 +103,7 @@
   .x {
     z-index: 1;
     position: relative;
-    right: -440px;
+    right: -480px;
     top: -20px;
     color: black;
     // float: right;
@@ -141,8 +147,8 @@
     border-bottom-left-radius: 18px;
     border-bottom-right-radius: 18px;
     position: relative;
-    bottom: -89px;
-    left: -21px;
+    bottom: -50px;
+    left: -20px;
     background-color: #dee0e1;
     width: 640.5px;
     height: 50px;

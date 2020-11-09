@@ -88,7 +88,7 @@ class editAnswer extends React.Component {
               '
               </textarea>
           <br/>
-          <div className="edit-module-footer">
+          <div className="a-edit-module-footer">
             <button className="question-submit">Edit answer</button>
           </div>
           {/* <input className="question-submit" type="submit" value={this.props.formType} /> */}
