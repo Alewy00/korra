@@ -1,20 +1,24 @@
 .topic-list{
     position: absolute;
-    top: 70px;
-    left: 0px;
+    top: 60px;
+    left: 130px;
     list-style: none;
     color: grey;
     width: fit-content;
+    font-size: 14px;
 }
-.topic-item{
-   
+.topic-button a{
+    text-decoration: none;
+    color: grey;
 }
 .topic-button{
+    // text-decoration: none;
+ 
     border: none;
     background: none;
     color: grey;
     // margin: 15px;
-    width: 150px;
+    width: 100px;
     padding: 10px;
     height: fit-content;
     text-align: left;
@@ -25,7 +29,16 @@
     background-color: white;
     
 }
-.topic-class{
-    // width: fit-content;
-    // margin-right: 0px;
+.topic{
+    // position: relative;
+    // top: -500px;
+    text-indent: 5px;
+    // text-align: center;
+    border-radius: 10px;
+    height: 20px;
+    width: 100px;
+}
+
+.topic:hover{
+    border-color: blue;
 }

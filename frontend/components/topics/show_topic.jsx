@@ -5,11 +5,27 @@ class TopicShow extends React.Component {
         super(props);
         this.state = {
             topic: {},
+            search: "",
         }
+        this.handleSubmit = this.handleSubmit.bind(this)
 
         this.props.recieveTopic({id: this.props.topicId})
         .then((topic) => {
             this.setState(topic);
+        });
+    }
+
+    handleSubmit(e) {        
+        e.preventDefault();
+        this.props.history.push(`${this.state.search}`)
+        window.location.reload();
+        // .then(this.setState({title: ''})) 
+        // this.handleCancel()
+     }
+    
+    update(field) {
+        return e => this.setState({
+        [field]: e.currentTarget.value
         });
     }
 
@@ -42,13 +58,35 @@ class TopicShow extends React.Component {
                      </li>
                     ))}
                 </ul>
+                <form onSubmit={this.handleSubmit} className="create-search">
+              <input type="text"
+                value={this.state.search}
+                onChange={this.update('search')}
+                className="searchBar"
+                placeholder="Search Korra"
+                />
+            {/* <button className="search-submit">SEARCH</button> */}
+      
+        </form>
                 </div>
             )
         } else {
             // console.log("empty")
             return (
-                <div className="topic-feed">
+                <div>
+                        <form onSubmit={this.handleSubmit} className="create-search">
+              <input type="text"
+                value={this.state.search}
+                onChange={this.update('search')}
+                className="searchBar"
+                placeholder="Search Korra"
+                />
+            {/* <button className="search-submit">SEARCH</button> */}
+      
+        </form>
+        <div className="question-list">
                     <p className="empty-topic">This topic does not have any questions yet - be the first!</p>
+            </div>
                 </div>
             )
         }

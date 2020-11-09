@@ -6,6 +6,10 @@ class AnswerIndex extends React.Component {
  
   constructor(props){
     super(props);
+    this.state = {
+      search: ""
+    }
+    this.handleSubmit = this.handleSubmit.bind(this)
     // this.handleDelete = this.handleDelete.bind(this)
     // this.editButtons = this.editButtons.bind(this)
    
@@ -14,10 +18,35 @@ class AnswerIndex extends React.Component {
     this.props.recieveAllQuestions();
   }
 
+  handleSubmit(e) {        
+    e.preventDefault();
+    this.props.history.replace(`search/${this.state.search}`)
+    // .then(this.setState({title: ''})) 
+    // this.handleCancel()
+    // window.location.reload();
+ }
+
+update(field) {
+    return e => this.setState({
+    [field]: e.currentTarget.value
+    });
+}
+
   
     render() { 
       const questions = Object.values(this.props.questions);
       return (
+        <div>
+             <form onSubmit={this.handleSubmit} className="create-search">
+              <input type="text"
+                value={this.state.search}
+                onChange={this.update('search')}
+                className="searchBar"
+                placeholder="Search Korra"
+                />
+            {/* <button className="search-submit">SEARCH</button> */}
+      
+        </form>
       <div className="answer-index">
         <div className="a-index-top">
             <h4 id="a-index-top-header">Answers for you</h4>
@@ -34,10 +63,12 @@ class AnswerIndex extends React.Component {
                 </li>
                 ))}
           </ul>
+       
           <div className="a-index-bottom">
 
         </div>
           </div> 
+      </div>
     )          
   }
 }

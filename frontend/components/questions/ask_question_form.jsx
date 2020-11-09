@@ -40,6 +40,7 @@ class AskQuestion extends React.Component {
     render() {
         const { currentUser } = this.props;
       return (
+          
           <div className="splash">
              <div className="ask-q">
             <button className="ask-q-button" onClick={this.handleQuestion}>

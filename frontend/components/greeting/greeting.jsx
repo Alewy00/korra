@@ -8,6 +8,7 @@ import AnswerIndexContainer from '../answers/answer_index_container'
 // import { Link} from 'react-router-dom'
 import showQuestion from '../questions/show_question_container'
 import showTopic from '../topics/show_topic_container'
+import searchQuestion from '../questions/search_index_container'
 const Greeting = ({ currentUser, logout }) => {
     const sessionLinks = () => (
       <div className="login-page">
@@ -25,6 +26,7 @@ const Greeting = ({ currentUser, logout }) => {
                 <button className="logout" onClick={logout}>Log Out</button>
            </div>
         <Switch>
+            <Route path="/search/:id" component={searchQuestion}/>
             <Route path="/questions/:id" component={showQuestion}/>
             <Route path="/topics/:id" component={showTopic}/>
             <Route exact path="/" component={AskQuestionFormContainer} />

@@ -10,7 +10,7 @@ export const showQuestion = question => ({
     question
 })
 
-export const receiveAllQuestions = questions => ({
+export const getAllQuestions = questions => ({
     type: RECEIVE_ALL_QUESTIONS,
     questions
 })
@@ -24,8 +24,16 @@ export const removeQuestion = questionId => ({
 
 export const recieveAllQuestions = () => dispatch => (
     QuestionAPI.recieveAllQuestions()
-        .then(questions => dispatch(receiveAllQuestions(questions)))
+        .then(questions => dispatch(getAllQuestions(questions)))
 )
+
+export const searchByQuestion = search => dispatch => (
+    QuestionAPI.searchAllQuestions(search)
+    .then(questions => dispatch(getAllQuestions(questions)))
+    )
+    
+
+
 
 export const recieveQuestion = questionId => dispatch => (
     QuestionAPI.recieveQuestion(questionId)

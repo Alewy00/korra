@@ -13,7 +13,12 @@ class Api::QuestionsController < ApplicationController
     end 
 
     def index
+        if params[:search].blank?
         @questions = Question.all
+        else
+        search = params[:search].downcase
+        @questions = Question.all.where("lower(body) LIKE ?", "%#{search}%" )
+        end
         render "api/questions/index"
     end 
 
@@ -39,6 +44,6 @@ class Api::QuestionsController < ApplicationController
     end
 
     def question_params
-        params.require(:question).permit(:body, :topic_id)
+        params.require(:question).permit(:body, :topic_id, :search)
     end
 end

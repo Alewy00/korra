@@ -11,7 +11,10 @@ class QuestionShow extends React.Component {
         super(props);
         this.state = {
           question: {},
+          search: "",
         }
+       
+        this.handleSubmit = this.handleSubmit.bind(this)
         this.props.recieveQuestion( this.props.questionId )
         .then((question) => {
           this.setState(question);
@@ -24,6 +27,21 @@ class QuestionShow extends React.Component {
             this.props.history.push('/');
           })
       }
+
+      handleSubmit(e) {        
+        e.preventDefault();
+        // this.props.history.push(`/search`)
+        this.props.history.push(`/search/${this.state.search}`)
+        // window.location.reload();
+        // .then(this.setState({title: ''})) 
+        // this.handleCancel()
+     }
+    
+    update(field) {
+        return e => this.setState({
+        [field]: e.currentTarget.value
+        });
+    }
 
       editButtons(question) {
         if (question.author_id === this.props.currentUser.id) {
@@ -60,6 +78,7 @@ class QuestionShow extends React.Component {
         if(!isEmpty(this.state.question)){
         return(
         <div> 
+         
         <div className="q-show">
             <div className="show-item">
             {this.state.question.body}
@@ -82,7 +101,17 @@ class QuestionShow extends React.Component {
                <h2><Link className ="suggest-link" to="/questions/74">What are the most unknown facts on the Second World War?</Link></h2>
                <h2><Link className ="suggest-link" to="/questions/75">What are some crazy things about the human body?</Link></h2>
                <h2><Link className ="suggest-link" to="/questions/76">What are some mind-blowing facts about food?</Link></h2>
+               
             </div>
+            <form onSubmit={this.handleSubmit} className="create-search">
+              <input type="text"
+                value={this.state.search}
+                onChange={this.update('search')}
+                className="searchBar"
+                placeholder="Search Korra"
+                />
+            {/* <button className="search-submit">SEARCH</button> */}
+        </form>
           </div>
         )
  

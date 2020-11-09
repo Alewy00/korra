@@ -7,6 +7,7 @@ export const askQuestion = question => (
 )
 
 export const recieveQuestion = questionId => (
+  
     $.ajax({
         url: `/api/questions/${questionId}`,
         method: 'GET'
@@ -18,6 +19,16 @@ export const recieveAllQuestions = () => (
         url: '/api/questions',
         method: 'GET'
     })
+    )
+    export const searchAllQuestions = search => (
+        console.log(search),
+        $.ajax({
+            url: '/api/questions',
+            method: 'GET',
+            data: {
+                search
+            }
+        })
     )
     
 export const deleteQuestion = question => (

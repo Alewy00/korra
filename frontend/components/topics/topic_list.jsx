@@ -17,9 +17,9 @@ class TopicList extends React.Component {
     handleSubmit(e) {        
         e.preventDefault();
         this.props.createTopic(this.state)
+        window.location.reload();
         // .then(this.setState({title: ''})) 
         // this.handleCancel()
-        // window.location.reload();
     }
 
     update(field) {
@@ -42,8 +42,6 @@ class TopicList extends React.Component {
                 < TopicItem topic={topic} key={i} />
                 // <li className="topic-item" key={i}><button className="topic-button">{topic.title}</button></li>
             ))}                       
-         </ul>
-        </div>
         <form onSubmit={this.handleSubmit} className="create-topic">
               <input type="text"
                 value={this.state.title}
@@ -51,10 +49,11 @@ class TopicList extends React.Component {
                 className="topic"
                 placeholder="New Topic"
                 />
-            <br/>
-            <button className="topic-submit">Submit</button>
+            {/* <button className="topic-submit">Submit</button> */}
       
         </form>
+         </ul>
+        </div>
        </div>
         
     )

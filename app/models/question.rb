@@ -11,4 +11,15 @@ class Question < ApplicationRecord
         
     has_many :answers
 
+
+    def self.search(search)
+        if search
+             body = Question.find_by(body: search)
+                return body
+        else
+            return @questions = Question.all
+        end
+    end
+
+
 end
