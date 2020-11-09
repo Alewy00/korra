@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Answer.destroy_all
 Question.destroy_all
+Topic.destroy_all
 User.destroy_all
 user1 =  User.create({ email:"demo_user@gmail.com", first_name: "Demo", last_name: "User", password: "hunter12" })
 user2 =  User.create({ email:"vader@gmail.com", first_name: "Darth", last_name: "Vader", password: "evilevil" })
@@ -14,12 +15,16 @@ user3 =  User.create({ email:"link@gmail.com", first_name: "Link", last_name: "L
 user4 =  User.create({ email:"gollum@gmail.com", first_name: "Smeogol", last_name: "/Gollum", password: "Thering" })
 user5 =  User.create({ email:"anakin@gmail.com", first_name: "Anakin", last_name: "Skywalker", password: "goodgood" })
 user6 =  User.create({ email:"scary@gmail.com", first_name: "Slender", last_name: "Man", password: "killkill" })
+topic1 = Topic.create({title: "War"})
+topic2 = Topic.create({title: "Random"})
+topic3 = Topic.create({title: "Food"})
+topic4 = Topic.create({title: "Scary"})
 questionTest = Question.create({body: "What are some ways to test my code?", author_id: user1.id })
-questionFirst = Question.create({body: "What are the most unknown facts on the Second World War?", author_id: user5.id })
-question1 = Question.create({body: "What are some crazy things about the human body?", author_id: user3.id })
-question2 = Question.create({body: "What are some mind-blowing facts about food? ", author_id: user2.id} )
-question3 = Question.create({body: "What are some random facts?", author_id: user4.id })
-question4 = Question.create({body: "Answer me (if you dare...)", author_id: user6.id })
+questionFirst = Question.create({body: "What are the most unknown facts on the Second World War?", author_id: user5.id,  topic_id: topic1.id })
+question1 = Question.create({body: "What are some crazy things about the human body?", author_id: user3.id,  topic_id: topic2.id })
+question2 = Question.create({body: "What are some mind-blowing facts about food? ", author_id: user2.id,  topic_id: topic3.id} )
+question3 = Question.create({body: "What are some random facts?", author_id: user4.id,  topic_id: topic2.id })
+question4 = Question.create({body: "Answer me (if you dare...)", author_id: user6.id, topic_id: topic4.id })
 answerTest = Answer.create(
 {body: "To start you can click the Question!", author_id: user3.id, question_id: questionTest.id })
 answerTest = Answer.create(
