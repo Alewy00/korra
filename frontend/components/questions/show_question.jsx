@@ -101,12 +101,12 @@ class QuestionShow extends React.Component {
             {/* </div> */}
         </div>
             <div className="suggested">
-              <h1 id="suggest-header">Suggested Questions</h1>
-              <div className="thin-line">________________________________________</div>
+              {/* <h1 id="suggest-header">Suggested Questions</h1> */}
+              {/* <div className="thin-line">________________________________________</div> */}
               {/* <h2 className ="suggest-link" onClick={this.link}>What are the most unknown facts on the Second World War?</h2> */}
-               <h2><Link className ="suggest-link" to="/questions/224" onClick={() => location.assign("https://korra09.herokuapp.com/#/questions/105")} >What are the most unknown facts on the Second World War?</Link></h2>
-               <h2><Link className ="suggest-link" to="/questions/225" onClick={() => location.assign("https://korra09.herokuapp.com/#/questions/106")}    >What are some crazy things about the human body?</Link></h2>
-               <h2><Link className ="suggest-link"  to="/questions/226" onClick={() => location.assign("https://korra09.herokuapp.com/#/questions/107")} >What are some mind-blowing facts about food?</Link></h2>
+               {/* <h2><Link className ="suggest-link" to="/questions/224" onClick={() => location.assign("https://korra09.herokuapp.com/#/questions/105")} >What are the most unknown facts on the Second World War?</Link></h2> */}
+               {/* <h2><Link className ="suggest-link" to="/questions/225" onClick={() => location.assign("https://korra09.herokuapp.com/#/questions/106")}    >What are some crazy things about the human body?</Link></h2> */}
+               {/* <h2><Link className ="suggest-link"  to="/questions/226" onClick={() => location.assign("https://korra09.herokuapp.com/#/questions/107")} >What are some mind-blowing facts about food?</Link></h2> */}
             </div>
             <form onSubmit={this.handleSubmit} className="create-search">
               <input type="text"
