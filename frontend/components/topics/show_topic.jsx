@@ -44,6 +44,17 @@ class TopicShow extends React.Component {
             });
 
             return (
+                <div>
+                <form onSubmit={this.handleSubmit} className="create-search">
+                <input type="text"
+                  value={this.state.search}
+                  onChange={this.update('search')}
+                  className="searchBar"
+                  placeholder="Search Korra"
+                  />
+              {/* <button className="search-submit">SEARCH</button> */}
+        
+          </form>
                 <div className="topic-feed">
                 <ul className ="question-list">
                         <div className="question-items">
@@ -61,23 +72,15 @@ class TopicShow extends React.Component {
                      </li>
                     ))}
                 </ul>
-                <form onSubmit={this.handleSubmit} className="create-search">
-              <input type="text"
-                value={this.state.search}
-                onChange={this.update('search')}
-                className="searchBar"
-                placeholder="Search Korra"
-                />
-            {/* <button className="search-submit">SEARCH</button> */}
-      
-        </form>
+         
+                </div>
                 </div>
             )
         } else {
             // console.log("empty")
             return (
                 <div>
-                        <form onSubmit={this.handleSubmit} className="create-search">
+            <form onSubmit={this.handleSubmit} className="create-search">
               <input type="text"
                 value={this.state.search}
                 onChange={this.update('search')}
