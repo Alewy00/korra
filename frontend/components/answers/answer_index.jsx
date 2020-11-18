@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import AnswerIndexItem from './answer_index_item'
-
+import TopicList from '../topics/topic_list_container'
 class AnswerIndex extends React.Component {
  
   constructor(props){
@@ -37,6 +37,7 @@ update(field) {
       const questions = Object.values(this.props.questions);
       return (
         <div>
+             <TopicList />
              <form onSubmit={this.handleSubmit} className="create-search">
               <input type="text"
                 value={this.state.search}

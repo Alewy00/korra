@@ -46,8 +46,11 @@ class TopicShow extends React.Component {
             return (
                 <div className="topic-feed">
                 <ul className ="question-list">
+                        <div className="question-items">
+                         <h3 id="topic-title">{this.state.topic.title}</h3> 
+                        </div>
                     {questions.map((question, i) => (
-                 <li key={i} className="question-items">
+                    <li key={i} className="question-items">
                       <IndexItem 
                       question={question} 
                       author={authors[i]} 

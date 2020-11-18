@@ -6,6 +6,7 @@
     color: grey;
     width: fit-content;
     font-size: 14px;
+    font-family: 'Roboto', sans-serif;
 }
 .topic-button a{
     text-decoration: none;
@@ -41,4 +42,9 @@
 
 .topic:hover{
     border-color: blue;
+}
+
+#topic-title{
+    font-size: 30px;
+    text-indent: 250px;
 }

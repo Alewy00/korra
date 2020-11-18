@@ -42,9 +42,9 @@ update(field) {
      
       const questions = Object.values(this.props.questions);
       if(questions.length != 0){
-
-      
       return (
+          <div>
+        {/* <TopicList /> */}
         <div className="question-index">
        <div className="question-item">
          <ul className ="question-list">
@@ -72,11 +72,13 @@ update(field) {
       
         </form>
         </div>
+        </div>
       
     )          
   }else{
     return(
         <div>
+
              <form onSubmit={this.handleSubmit} className="create-search">
               <input type="text"
                 value={this.state.search}

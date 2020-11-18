@@ -9,6 +9,7 @@ import AnswerIndexContainer from '../answers/answer_index_container'
 import showQuestion from '../questions/show_question_container'
 import showTopic from '../topics/show_topic_container'
 import searchQuestion from '../questions/search_index_container'
+import { withRouter } from 'react-router-dom'
 const Greeting = ({ currentUser, logout }) => {
     const sessionLinks = () => (
       <div className="login-page">
@@ -21,13 +22,13 @@ const Greeting = ({ currentUser, logout }) => {
                 <Link to="/" id="korra-taskbar">Korra</Link>
                 <Link to="/" id="home-taskbar"><i className="fas fa-home">
                   <span id="home-text"> Home</span></i></Link>
-                <Link to="answers" id="answers-taskbar"><i className="far fa-edit">
+                <Link to="/answers" id="answers-taskbar"><i className="far fa-edit">
                 <span id="answers-text">Answer</span></i></Link>
                 <button className="logout" onClick={logout}>Log Out</button>
            </div>
         <Switch>
             <Route path="/search/:id" component={searchQuestion}/>
-            <Route path="/questions/:id" component={showQuestion}/>
+            <Route exact path="/questions/:id" component={withRouter(showQuestion)}/>
             <Route path="/topics/:id" component={showTopic}/>
             <Route exact path="/" component={AskQuestionFormContainer} />
             <Route exact path="/answers" component={AnswerIndexContainer} />
