@@ -1,7 +1,15 @@
 .create-search{
     position: relative;
-    top: -475px;
-    right: -590px;
+    top: 8px;
+    right: -630px;
+    z-index: 1;
+    color: lightgreen;
+}
+
+.create-search-index{
+    position: relative;
+    top:  -75px;
+    right: -630px;
     z-index: 1;
     color: lightgreen;
 }

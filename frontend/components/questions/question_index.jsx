@@ -51,6 +51,17 @@ class QuestionIndex extends React.Component {
      
       const questions = Object.values(this.props.questions);
       return (
+        <div>
+           <form onSubmit={this.handleSubmit} className="create-search-index">
+              <input type="text"
+                value={this.state.search}
+                onChange={this.update('search')}
+                className="searchBar"
+                placeholder="Search Korra"
+                />
+            {/* <button className="search-submit">SEARCH</button> */}
+      
+        </form>
         <div className="question-index">
        <div className="question-item">
          <ul className ="question-list">
@@ -67,18 +78,10 @@ class QuestionIndex extends React.Component {
                 </li>
                 ))}
           </ul>
-          <form onSubmit={this.handleSubmit} className="create-search">
-              <input type="text"
-                value={this.state.search}
-                onChange={this.update('search')}
-                className="searchBar"
-                placeholder="Search Korra"
-                />
-            {/* <button className="search-submit">SEARCH</button> */}
-      
-        </form>
+         
               
           </div> 
+        </div>
         </div>
     )          
   }

@@ -84,7 +84,15 @@ class QuestionShow extends React.Component {
         if(!isEmpty(this.state.question)){
         return(
         <div> 
-         
+            <form onSubmit={this.handleSubmit} className="create-search">
+              <input type="text"
+                value={this.state.search}
+                onChange={this.update('search')}
+                className="searchBar"
+                placeholder="Search Korra"
+                />
+            {/* <button className="search-submit">SEARCH</button> */}
+        </form>
         <div className="q-show">
             <div className="show-item">
             {this.state.question.body}
@@ -108,15 +116,7 @@ class QuestionShow extends React.Component {
                {/* <h2><Link className ="suggest-link" to="/questions/225" onClick={() => location.assign("https://korra09.herokuapp.com/#/questions/106")}    >What are some crazy things about the human body?</Link></h2> */}
                {/* <h2><Link className ="suggest-link"  to="/questions/226" onClick={() => location.assign("https://korra09.herokuapp.com/#/questions/107")} >What are some mind-blowing facts about food?</Link></h2> */}
             </div>
-            <form onSubmit={this.handleSubmit} className="create-search">
-              <input type="text"
-                value={this.state.search}
-                onChange={this.update('search')}
-                className="searchBar"
-                placeholder="Search Korra"
-                />
-            {/* <button className="search-submit">SEARCH</button> */}
-        </form>
+         
           </div>
         )
  
